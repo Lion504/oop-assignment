@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/assignment-1.1/assignment-1.iml" filepath="$PROJECT_DIR$/assignment-1.1/assignment-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assignment-1.2/assignment-1.2.iml" filepath="$PROJECT_DIR$/assignment-1.2/assignment-1.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oop-assignment.iml" filepath="$PROJECT_DIR$/oop-assignment.iml" />
+    </modules>
+  </component>
+</project>
