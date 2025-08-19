@@ -17,7 +17,7 @@ public class Task1 {
         if (d > 0){
             Double root1 = ((-b + Math.sqrt(d)) / 2 * a);
             Double root2 = ((-b - Math.sqrt(d)) / 2 * a);
-            System.out.println("The roots are: " +  root1 + " , " + root2 + ".");
+            System.out.println("The roots are: " +  root1 + ", " + root2 + ".");
         } else if(d == 0) {
             Double root = ((-b + Math.sqrt(d)) / 2 * a);
             System.out.println("The root is: " + root);

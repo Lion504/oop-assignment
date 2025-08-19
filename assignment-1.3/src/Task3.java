@@ -4,13 +4,14 @@ public class Task3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a, b;
+        System.out.print("Prim number checker\n");
         do {
             System.out.print("Please enter 1st positive integer number: ");
             a = sc.nextInt();
             if (a <= 1) {
                 System.out.println("Please enter an integer > 1");
             } else {
-                System.out.println("1st num is valid, then move to next step⇒");
+                System.out.println("1st num is valid");
             }
         } while (a <= 1);
 
@@ -20,7 +21,7 @@ public class Task3 {
             if (b <= a) {
                 System.out.println("2nd num should greater than " + a);
             } else {
-                System.out.println("2nd is valid, 🔎check prime numbers now...");
+                System.out.println("2nd is valid \n🔎check prime numbers now...");
             }
         } while (b < a);
 
