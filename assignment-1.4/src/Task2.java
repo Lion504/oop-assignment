@@ -4,21 +4,39 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
+// handle array size
         int size;
         while (true) {
             System.out.print("How many numbers of integer you wish in array: ");
-            size = input.nextInt();
-            if (size >= 2) break;
+            if (input.hasNextInt()){
+                size = input.nextInt();
+                if (size >= 2) {
+                    break;
+                } else {
+                    System.out.println("Size must be at least 2. Try again.");
+                }
+            }  else {
+                System.out.println("Must be an integer. Try again.");
+                input.next();//from Scanner class, used to consume previous invalid input, prevent infinite loop
+            }
         }
-
+// handle array value
         int[] intList = new int[size];
         int counter = 1;
         for (int i = 0; i < size; i++) {
-            System.out.print("Enter integer " + counter + ": ");
-            int num = input.nextInt();
-            intList[i] = num;
-            counter += 1;
+            while (true) {
+                System.out.print("Enter integer " + counter + ": ");
+                if (input.hasNextInt()){
+                    int num = input.nextInt();
+                    intList[i] = num;
+                    counter += 1;
+                    break;
+                } else {
+                    System.out.println("Invalid input. Try again.");
+                    input.next();//tried, if use input.nextLine(); will give warning + Enter integer + Enter integer
+                }
+            }
+
         }
         //list number
         System.out.print("Number list: ");
