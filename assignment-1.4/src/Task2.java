@@ -73,7 +73,7 @@ public class Task2 {
         int max1 = intList[maxListIndex1];
         int max2 = intList[maxListIndex2];
         int sum = max1 + max2;
-        System.out.println("Sum is: " + sum);
+        System.out.println("\nSum is: " + sum);
         System.out.println("Indexer: " + maxListIndex1 + " " + maxListIndex2);
 
         /*if (intList.length <2) {
