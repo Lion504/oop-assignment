@@ -8,14 +8,14 @@ public class Task2 {
         int size;
         while (true) {
             System.out.print("How many numbers of integer you wish in array: ");
-            if (input.hasNextInt()){
+            if (input.hasNextInt()) {
                 size = input.nextInt();
                 if (size >= 2) {
                     break;
                 } else {
                     System.out.println("Size must be at least 2. Try again.");
                 }
-            }  else {
+            } else {
                 System.out.println("Must be an integer. Try again.");
                 input.next();//from Scanner class, used to consume previous invalid input, prevent infinite loop
             }
@@ -26,7 +26,7 @@ public class Task2 {
         for (int i = 0; i < size; i++) {
             while (true) {
                 System.out.print("Enter integer " + counter + ": ");
-                if (input.hasNextInt()){
+                if (input.hasNextInt()) {
                     int num = input.nextInt();
                     intList[i] = num;
                     counter += 1;
