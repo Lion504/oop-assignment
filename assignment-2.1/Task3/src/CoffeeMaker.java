@@ -1,7 +1,7 @@
 public class CoffeeMaker {
     private String coffeeType;
     private boolean on = false;
-    private double amount;
+    private final double amount;
 
     public CoffeeMaker(String coffeeType, double amount, boolean on) {
         this.coffeeType = coffeeType;
