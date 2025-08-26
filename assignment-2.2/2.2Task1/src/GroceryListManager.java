@@ -2,26 +2,7 @@ import java.util.ArrayList;
 public class GroceryListManager {
 
     private ArrayList<String> groceryList = new ArrayList<>();
-
-    public static void main (String[] args){
-        GroceryListManager groceryListManager = new GroceryListManager();
-        groceryListManager.addItem("Apple");
-        groceryListManager.addItem("Banana");
-        groceryListManager.addItem("Cheese");
-        groceryListManager.addItem("Coffee");
-        groceryListManager.addItem("Pizza");
-        groceryListManager.displayList();
-        String itemCheck = "Apple";
-        boolean isInGrocery = groceryListManager.checkItem(itemCheck);
-        System.out.println("\nIs " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
-
-        groceryListManager.removeItem(itemCheck);
-        //isInGrocery = groceryListManager.checkItem(itemCheck);
-        //System.out.println("Is " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
-        System.out.print("Update ");
-        groceryListManager.displayList();
-    }
-
+//public api
     void addItem (String item) {
         groceryList.add(item);
     }
@@ -45,5 +26,25 @@ public class GroceryListManager {
 
     boolean checkItem (String item) {
         return groceryList.contains(item);
+    }
+
+//entry point
+    public static void main (String[] args){
+        GroceryListManager groceryLM = new GroceryListManager();
+        groceryLM.addItem("Apple");
+        groceryLM.addItem("Banana");
+        groceryLM.addItem("Cheese");
+        groceryLM.addItem("Coffee");
+        groceryLM.addItem("Pizza");
+        groceryLM.displayList();
+        String itemCheck = "Apple";
+        boolean isInGrocery = groceryLM.checkItem(itemCheck);
+        System.out.println("\nIs " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
+
+        groceryLM.removeItem(itemCheck);
+        //isInGrocery = groceryListManager.checkItem(itemCheck);
+        //System.out.println("Is " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
+        System.out.print("Update ");
+        groceryLM.displayList();
     }
 }
