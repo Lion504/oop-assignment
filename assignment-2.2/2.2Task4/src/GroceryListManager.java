@@ -62,9 +62,11 @@ public class GroceryListManager {
     //update quantity
     public boolean updateQuantity(String itemName, int quantity) {
         Item Qupdate = groceryList.get(itemName);
+        System.out.println("\nUpdate " + itemName + " quantity");
         if (Qupdate != null) {
             Qupdate.setQuantity(quantity);
-            System.out.println("\nUpdate success " + itemName + " new quantity " + quantity + "\n");
+            System.out.println("Update success " + itemName + " new quantity " + quantity + "\n");
+            System.out.println("After Update");
             return true;
         } else {
             System.out.println("Update error, no item here!");
@@ -136,45 +138,5 @@ public class GroceryListManager {
         }
     }
 
-    //entry point
-    public static void main(String[] args) {
-        //add items
-        GroceryListManager groceryLM = new GroceryListManager();
-        groceryLM.addItem("Apple", 1.2, "fruit", 100);
-        groceryLM.addItem("Banana", 1.0, "fruit", 50);
-        groceryLM.addItem("Cheese", 3.5, "food", 66);
-        groceryLM.addItem("Coffee", 3.5, "food", 30);
-        groceryLM.addItem("Pizza", 8.0, "food", 24);
-        //groceryLM.displayList();
 
-        //show items along with + quantity
-        groceryLM.displayAvailableItems();
-
-        //update quantity
-        groceryLM.updateQuantity("Apple", 0);
-
-        //show + quantity items again, check update
-        groceryLM.displayAvailableItems();
-
-        //show category
-        String getCategory = "fruit";
-        List<String> insideCategory = groceryLM.displayByCategory(getCategory);
-        System.out.printf("\nItems in '%s' category: %s%n", getCategory, insideCategory);
-
-        //check item
-        String itemCheck = "Apple";
-        boolean isInGrocery = groceryLM.checkItem(itemCheck);
-        System.out.println("\nIs " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
-
-        //remove + check item
-        groceryLM.removeItem(itemCheck);
-        System.out.print("Update ");
-        groceryLM.displayList();
-
-        //check category
-        insideCategory = groceryLM.displayByCategory(getCategory);
-        System.out.printf("\nItems in '%s' category: %s%n", getCategory, insideCategory);
-
-
-    }
 }
