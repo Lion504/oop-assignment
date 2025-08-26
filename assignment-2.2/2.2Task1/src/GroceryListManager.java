@@ -9,7 +9,7 @@ public class GroceryListManager {
 
     void removeItem (String item) {
         groceryList.remove(item);
-        System.out.println("Remove " +  item + " from the grocery list." + "\n");
+        System.out.println("Remove " +  item + " from the grocery list..." + "\n");
     }
 
     void displayList () {
