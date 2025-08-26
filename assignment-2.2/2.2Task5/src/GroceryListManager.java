@@ -117,17 +117,6 @@ public class GroceryListManager {
                 .collect(Collectors.toList());
     }
 
-    /* //get specific category
-     public List<String> getItemByCategory(String category) {
-         if (groceryList.isEmpty()) {
-             System.out.println("Grocery List is Empty!");
-         }
-         return groceryList.entrySet()
-                 .stream()
-                 .filter(e -> e.getValue().getCategory().equalsIgnoreCase(category))
-                 .map(Map.Entry::getKey)
-                 .collect(Collectors.toList());
-     }*/
     //display specific category items
     public void displayCategoryItems(String category) {
         System.out.println("Items in " + category + " category: ");
