@@ -7,9 +7,13 @@ public class GroceryListManager {
         groceryList.add(item);
     }
 
-    void removeItem (String item) {
-        groceryList.remove(item);
-        System.out.println("Remove " +  item + " from the grocery list..." + "\n");
+    public boolean removeItem(String itemName) {
+        if (itemName != null) {
+            System.out.println("Remove " + itemName + " from the grocery list..." + "\n");
+            return true;
+        }
+        System.out.println("Remove error, nothing here!");
+        return false;
     }
 
     void displayList () {
@@ -38,8 +42,9 @@ public class GroceryListManager {
         groceryLM.addItem("Pizza");
         groceryLM.displayList();
         String itemCheck = "Apple";
+        System.out.println("\nCheck " +  itemCheck + " in grocery list");
         boolean isInGrocery = groceryLM.checkItem(itemCheck);
-        System.out.println("\nIs " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
+        System.out.println("Is " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
 
         groceryLM.removeItem(itemCheck);
         //isInGrocery = groceryListManager.checkItem(itemCheck);
