@@ -86,13 +86,15 @@ public class GroceryListManager {
         groceryLM.displayList();
         //show category
         String getCategory = "fruit";
+        System.out.println("\nChecking " + getCategory);
         List<String> insideCategory = groceryLM.displayByCategory(getCategory);
-        System.out.printf("\nItems in '%s' category: %s%n", getCategory, insideCategory);
+        System.out.printf("Items in '%s' category: %s%n", getCategory, insideCategory);
 
         //check item
         String itemCheck = "Apple";
+        System.out.println("\nChecking " + itemCheck);
         boolean isInGrocery = groceryLM.checkItem(itemCheck);
-        System.out.println("\nIs " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
+        System.out.println("Is " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
         //remove + check item
         groceryLM.removeItem(itemCheck);
         System.out.print("Update ");
@@ -100,7 +102,7 @@ public class GroceryListManager {
 
         //check category
         insideCategory = groceryLM.displayByCategory(getCategory);
-        System.out.printf("\nItems in '%s' category: %s%n", getCategory, insideCategory);
+        System.out.printf("\nNow items in '%s' category: %s%n", getCategory, insideCategory);
 
 
     }
