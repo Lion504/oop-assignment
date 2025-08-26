@@ -44,9 +44,10 @@ public class GroceryListManager {
         groceryList.put(name, value);
     }
 
+    //remover
     public boolean removeItem(String itemName) {
         Item remover = groceryList.remove(itemName);
-        if  (remover != null) {
+        if (remover != null) {
             System.out.println("Remove " + itemName + " from the grocery list..." + "\n");
             return true;
         }
@@ -63,7 +64,11 @@ public class GroceryListManager {
         Item Qupdate = groceryList.get(itemName);
         if (Qupdate != null) {
             Qupdate.setQuantity(quantity);
-            System.out.println("Update success " + itemName + " new quantity " + quantity +"\n");
+            System.out.println("\nUpdate success " + itemName + " new quantity " + quantity + "\n");
+            return true;
+        } else {
+            System.out.println("Update error, no item here!");
+            return false;
         }
     }
 
@@ -79,7 +84,11 @@ public class GroceryListManager {
             Item value = entry.getValue();
             Double price = value.getPrice();
             String category = value.getCategory();
-            System.out.println(index + ". " + "Name: " + name + ", Price: " + price + ", Category: " + category);
+            int quantity = value.getQuantity();
+            System.out.println(index + ". " + "Name: " + name
+                    + ", Price: " + price
+                    + ", Category: " + category
+                    + ", Quantity: " + quantity);
             index++;
         }
 
@@ -103,7 +112,29 @@ public class GroceryListManager {
     }
 
     //display quantity + items
-    public
+    public void displayAvailableItems() {
+        if (groceryList.isEmpty()) {
+            System.out.println("Grocery List is Empty!");
+        }
+        int index = 1;
+        System.out.println("Grocery Available items List: ");
+        for (Map.Entry<String, Item> entry : groceryList.entrySet()) {
+            String name = entry.getKey();
+            Item value = entry.getValue();
+            Double price = value.getPrice();
+            String category = value.getCategory();
+            int quantity = value.getQuantity();
+            if (quantity <= 0) {
+                System.out.println(index + ". Warning! " + name + " is Empty!");
+            } else {
+                System.out.println(index + ". " + "Name: " + name
+                        + ", Price: " + price
+                        + ", Category: " + category
+                        + ", Quantity: " + quantity);
+            }
+            index++;
+        }
+    }
 
     //entry point
     public static void main(String[] args) {
@@ -114,16 +145,16 @@ public class GroceryListManager {
         groceryLM.addItem("Cheese", 3.5, "food", 66);
         groceryLM.addItem("Coffee", 3.5, "food", 30);
         groceryLM.addItem("Pizza", 8.0, "food", 24);
-        groceryLM.displayList();
+        //groceryLM.displayList();
 
         //show items along with + quantity
-
+        groceryLM.displayAvailableItems();
 
         //update quantity
-        groceryLM.updateQuantity("Apple", 1);
+        groceryLM.updateQuantity("Apple", 0);
 
         //show + quantity items again, check update
-
+        groceryLM.displayAvailableItems();
 
         //show category
         String getCategory = "fruit";
