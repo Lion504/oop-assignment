@@ -37,8 +37,8 @@ public class GroceryListManager {
 
     }
 
-    boolean checkItem (String item) {
-        return groceryList.contains(item);
+    boolean checkItem (String itemName) {
+        return groceryList.contains(itemName);
     }
 
 //entry point
