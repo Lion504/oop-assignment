@@ -3,16 +3,25 @@ public class GroceryListManager {
 
     private ArrayList<String> groceryList = new ArrayList<>();
 //public api
-    void addItem (String item) {
-        groceryList.add(item);
+    void addItem (String itemName) {
+        for (int j = 0; j < groceryList.size(); j++) {
+            if (groceryList.get(j).equals(itemName)) {
+                System.out.println("Duplicated. Item " + itemName + " is already present in the grocery list");
+            }
+        } groceryList.add(itemName);
     }
 
     public boolean removeItem(String itemName) {
         if (itemName != null) {
-            System.out.println("Remove " + itemName + " from the grocery list..." + "\n");
-            return true;
+            for  (int i = 0; i < groceryList.size(); i++) {
+                if (groceryList.get(i).equals(itemName)) {
+                    System.out.println("Remove " + itemName + " from the grocery list..." + "\n");
+                    groceryList.remove(itemName);
+                    return true;
+                }
+            }
         }
-        System.out.println("Remove error, nothing here!");
+        System.out.println("Remove " + itemName + " error, nothing here!\n");
         return false;
     }
 
@@ -41,14 +50,23 @@ public class GroceryListManager {
         groceryLM.addItem("Coffee");
         groceryLM.addItem("Pizza");
         groceryLM.displayList();
-        String itemCheck = "Apple";
-        System.out.println("\nCheck " +  itemCheck + " in grocery list");
-        boolean isInGrocery = groceryLM.checkItem(itemCheck);
-        System.out.println("Is " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
 
-        groceryLM.removeItem(itemCheck);
-        //isInGrocery = groceryListManager.checkItem(itemCheck);
-        //System.out.println("Is " + itemCheck + " in the grocery list? " + isInGrocery + "\n");
+        String itemCheck1 = "Apple";
+        String itemCheck2 = "Orange";
+
+        //add duplicated
+        System.out.println("Add " + itemCheck1 + " again");
+        groceryLM.addItem(itemCheck1);
+
+        System.out.println("\nCheck " +  itemCheck1 + " in grocery list");
+        boolean isInGrocery = groceryLM.checkItem(itemCheck1);
+        System.out.println("Is " + itemCheck1 + " in the grocery list? " + isInGrocery + "\n");
+
+        groceryLM.removeItem(itemCheck1);
+        groceryLM.removeItem(itemCheck2);
+
+        //isInGrocery = groceryListManager.checkItem(itemCheck1);
+        //System.out.println("Is " + itemCheck1 + " in the grocery list? " + isInGrocery + "\n");
         System.out.print("Update ");
         groceryLM.displayList();
     }
