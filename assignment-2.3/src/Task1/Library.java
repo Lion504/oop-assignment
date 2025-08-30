@@ -3,6 +3,7 @@ package Task1;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class Library {
@@ -74,7 +75,13 @@ public class Library {
         while (listBooks.hasNext()) {
             Books book = listBooks.next();
             //System.out.printf("%s.  " + counter + " . " + book.getBookName() + ": " + book.getBookAuthor() + book.getPublicationTime() + book.getBookPrice());
-            System.out.printf("  %s. %s: %s %s %s euros.\n", counter, book.getBookName(), book.getBookAuthor(), book.getPublicationTime(), book.getBookPrice());
+            System.out.printf("  %s. %s: %s %s - €%s.\n",
+                    counter,
+                    book.getBookName(),
+                    book.getBookAuthor(),
+                    book.getPublicationTime(),
+                    book.getBookPrice()
+            );
             counter++;
         }
     }
@@ -84,12 +91,17 @@ public class Library {
     //use stream
         List<Books> booksFind = booksList.stream()
                 .filter(book -> book.getBookAuthor().equalsIgnoreCase(author))
-                .collect(Collectors.toList());
+                .toList();
         if (booksFind.isEmpty()) {
             System.out.println("⚠️ " +"Books not found!");
         }  else {
-            System.out.printf("🔍 " +"Find books by %s: %s", author);
-            booksFind.forEach(book -> System.out.println("-- " + book));
+            System.out.printf("\n🔍 " +"Find books by %s: %n", author);
+            AtomicInteger counter = new AtomicInteger(1);
+            booksFind.forEach(book ->
+                    System.out.printf("--%s. %s\n",
+                            counter.getAndIncrement(),
+                            book)
+            );
         }
     }
 

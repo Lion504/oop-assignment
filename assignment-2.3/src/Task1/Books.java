@@ -48,4 +48,9 @@ public class Books {
         return bookPrice;
     }
 
+    @Override
+    public String toString() {
+        return String.format("<%s> by %s (%d) - €%.2f", bookName, bookAuthor, publicationTime, bookPrice);
+    }
+
 }

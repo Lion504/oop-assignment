@@ -18,12 +18,14 @@ public class Main {
             library.addBook(b);
         }
 
-        //test instance
+        //instance test duplicated
         Books booktest = new Books("The Great Gatsby","F. Scott Fitzgerald",1925,10.75);
         library.addBook(booktest); // expected output already in Library
+        //instance test findBookByAuthor
+        String author = "George Orwell";
 
         library.displayBooks();
 
-        library.findBookByAuthor("George Orwell");
+        library.findBookByAuthor(author);
     }
 }
