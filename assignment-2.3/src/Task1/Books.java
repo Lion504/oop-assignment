@@ -15,15 +15,37 @@ public class Books {
     }
 
     //setter
-    public void setBookName(String bookName) {this.bookName = bookName;}
-    public void setBookAuthor(String bookAuthor) {this.bookAuthor = bookAuthor;}
-    public void setPublicationTime(int publicationTime) {this.publicationTime = publicationTime;}
-    public void setBookPrice(double bookPrice) {this.bookPrice = bookPrice;}
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public void setBookAuthor(String bookAuthor) {
+        this.bookAuthor = bookAuthor;
+    }
+
+    public void setPublicationTime(int publicationTime) {
+        this.publicationTime = publicationTime;
+    }
+
+    public void setBookPrice(double bookPrice) {
+        this.bookPrice = bookPrice;
+    }
 
     //getter
-    public String getBookName() {return bookName;}
-    public String getBookAuthor() {return bookAuthor;}
-    public int getPublicationTime() {return publicationTime;}
-    public double getBookPrice() {return bookPrice;}
+    public String getBookName() {
+        return bookName;
+    }
+
+    public String getBookAuthor() {
+        return bookAuthor;
+    }
+
+    public int getPublicationTime() {
+        return publicationTime;
+    }
+
+    public double getBookPrice() {
+        return bookPrice;
+    }
 
 }

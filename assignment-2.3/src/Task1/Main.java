@@ -2,19 +2,23 @@ package Task1;
 
 public class Main {
     public static void main(String[] args) {
-        //create instance
+        //instance for book,
+        Books[] book = {
+                new Books("To Kill a Mockingbird","Harper Lee",1960,15.99),
+                new Books("1984","George Orwell",1949,12.50),
+                new Books("The Great Gatsby","F. Scott Fitzgerald",1925,10.75),
+                new Books("Pride and Prejudice","Jane Austen",1813,9.99),
+                new Books("The Catcher in the Rye","J.D. Salinger",1951,14.50),
+                new Books("Go Set a Watchman","Harper Lee",2015,18.00),
+                new Books("Animal Farm","George Orwell",1945,11.25),
+                new Books("The Great Gatsby","F. Scott Fitzgerald",1925,10.75),//seems last one can have ,
+        };
+        //instance for Library, add book
         Library library =  new Library();
-        Books book = new Books();
+        for (Books b : book) {
+            library.addBook(b);
+        }
 
-        //add book examples
-        Book.addBook("To Kill a Mockingbird","Harper Lee",1960,15.99);
-        Book.addBook("1984","George Orwell",1949,12.50);
-        Book.addBook("The Great Gatsby","F. Scott Fitzgerald",1925,10.75);
-        Book.addBook("Pride and Prejudice","Jane Austen",1813,9.99);
-        Book.addBook("The Catcher in the Rye","J.D. Salinger",1951,14.50);
-        Book.addBook("Go Set a Watchman","Harper Lee",2015,18.00);
-        Book.addBook("Animal Farm","George Orwell",1945,11.25);
-        Book.addBook("The Great Gatsby","F. Scott Fitzgerald",1925,10.75);
 
     }
 }
