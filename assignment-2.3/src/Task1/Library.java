@@ -10,22 +10,42 @@ public class Library {
     ArrayList<Books> booksList = new ArrayList<Books>();
 
     //add
-    public void addBook(String bookName, String bookAuthor, int publicationTime, double price) {
+    /*public void addBook(String bookName, String bookAuthor, int publicationTime, double price) {
         //need create instance new Books to call Books class
         if (bookName != null && bookAuthor != null) {
             for (int i = 0; i <= booksList.size(); i++ ) {
                 Books book = booksList.get(i);
-                if (book.getBookName().equals(bookName)) {
-                    System.out.println(bookName + "already exists");
-                } else {
+                if (book.getBookName().equalsIgnoreCase(bookName)) {
                     booksList.add(new Books(bookName, bookAuthor, publicationTime, price));
                     System.out.println(bookName + " added successfully!");
+                } else {
+                    System.out.println(bookName + "already exists");
                 }
             }
         } else  {
-            System.out.println("Book Name or Author or Publication Time is null");
+            System.out.println("Book Name or Author is null");
         }
+    }*/
+    public void addBook(Books book) {
+        if (book == null || book.getBookName() == null || book.getBookAuthor() == null) {
+            System.out.println("Book Name or Author is required");
+            return;
+        }
+        //seems unnecessary it's compare hashcode, keep it first
+        if (booksList.contains(book)) {
+            System.out.println("Book already exists");
+            return;
+        }
+        for (Books libBooks : booksList) {
+            if (libBooks.getBookName().equalsIgnoreCase(book.getBookName())) {
+                System.out.println(book.getBookName() + " is already in Library!");
+                return;
+            }
+        }
+        booksList.add(book);
+        System.out.println(book.getBookName() + " added successfully!");
     }
+
 
     //remove by book name
     public boolean removeBook (String bookName) {
