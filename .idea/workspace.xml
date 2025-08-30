@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="package structure update">
-      <change afterPath="$PROJECT_DIR$/assignment-2.3/src/Task1/Books.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-2.3/src/Task1/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-2.3/src/Task1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment-2.3/assignment-2.3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-2.3/assignment-2.3.iml" afterDir="false" />
+    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task1/2.2Task1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task1/src/GroceryListManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task2/2.2Task2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task2/src/GroceryListManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task3/2.2Task3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task3/src/GroceryListManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task4/2.2Task4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task4/src/GroceryListChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task4/src/GroceryListManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task5/2.2Task5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task5/src/GroceryListManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/2.2Task5/src/GroceryListchecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.2old/assignment-2.2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-2.3/src/Task1/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-2.3/src/Task1/Library.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1756281311401</updated>
       <workItem from="1756281313138" duration="1186000" />
-      <workItem from="1756282522425" duration="10097000" />
+      <workItem from="1756282522425" duration="12024000" />
     </task>
     <task id="LOCAL-00001" summary="package structure update">
       <option name="closed" value="true" />
@@ -111,7 +122,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756282033872</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1756540875173</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756540875173</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <option name="closed" value="true" />
+      <created>1756540882478</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756540882478</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +146,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="package structure update" />
-    <option name="LAST_COMMIT_MESSAGE" value="package structure update" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

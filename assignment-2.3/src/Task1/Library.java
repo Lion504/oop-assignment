@@ -12,7 +12,7 @@ public class Library {
         books.add(new Books.Item(bookName, bookAuthor, publicationTime, price));
     }
 
-    //remove by name
+    //remove by book name
     public void removeBook (String bookName) {
         System.out.println(bookName + " Removing... ");
         for (Books.Item book : books){
@@ -31,9 +31,14 @@ public class Library {
     }
 
     //display
+    public void displayBooks() {
 
-    //
+    }
 
+    //find book by author
+    public void findBookByAuthor(String author) {
+
+    }
 
 
 }
