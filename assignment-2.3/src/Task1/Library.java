@@ -75,13 +75,14 @@ public class Library {
         while (listBooks.hasNext()) {
             Books book = listBooks.next();
             //System.out.printf("%s.  " + counter + " . " + book.getBookName() + ": " + book.getBookAuthor() + book.getPublicationTime() + book.getBookPrice());
-            System.out.printf("  %s. %s: %s %s - €%s.\n",
+            System.out.printf("  %s. %s: %s, %s, - €%s.\n",
                     counter,
                     book.getBookName(),
                     book.getBookAuthor(),
                     book.getPublicationTime(),
                     book.getBookPrice()
             );
+            //System.out.printf("%s. %s\n",counter,book);
             counter++;
         }
     }
