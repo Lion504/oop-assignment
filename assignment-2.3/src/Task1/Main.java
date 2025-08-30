@@ -10,8 +10,7 @@ public class Main {
                 new Books("Pride and Prejudice","Jane Austen",1813,9.99),
                 new Books("The Catcher in the Rye","J.D. Salinger",1951,14.50),
                 new Books("Go Set a Watchman","Harper Lee",2015,18.00),
-                new Books("Animal Farm","George Orwell",1945,11.25),
-                new Books("The Great Gatsby","F. Scott Fitzgerald",1925,10.75),//seems last one can have ,
+                new Books("Animal Farm","George Orwell",1945,11.25),//seems last one can have ,
         };
         //instance for Library, add book
         Library library =  new Library();
@@ -19,6 +18,12 @@ public class Main {
             library.addBook(b);
         }
 
+        //test instance
+        Books booktest = new Books("The Great Gatsby","F. Scott Fitzgerald",1925,10.75);
+        library.addBook(booktest); // expected output already in Library
 
+        library.displayBooks();
+
+        library.findBookByAuthor("George Orwell");
     }
 }

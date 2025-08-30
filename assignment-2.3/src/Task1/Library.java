@@ -28,22 +28,22 @@ public class Library {
     }*/
     public void addBook(Books book) {
         if (book == null || book.getBookName() == null || book.getBookAuthor() == null) {
-            System.out.println("Book Name or Author is required");
+            System.out.println("⚠️" + "Book Name or Author is required");
             return;
         }
         //seems unnecessary it's compare hashcode, keep it first
         if (booksList.contains(book)) {
-            System.out.println("Book already exists");
+            System.out.println("⚠️" + book.getBookName() + "already exists");
             return;
         }
         for (Books libBooks : booksList) {
             if (libBooks.getBookName().equalsIgnoreCase(book.getBookName())) {
-                System.out.println(book.getBookName() + " is already in Library!");
+                System.out.println("⚠️" + book.getBookName() + " is already in Library!");
                 return;
             }
         }
         booksList.add(book);
-        System.out.println(book.getBookName() + " added successfully!");
+        System.out.println("✅ <" + book.getBookName() + "> added successfully!");
     }
 
 
@@ -55,25 +55,26 @@ public class Library {
             Books book = itrbooks.next();
             if (book.getBookName().equals(bookName)) {
                 booksList.remove(book);
-                System.out.println(bookName + " removed successfully!");
+                System.out.println("🆗 " + bookName + " removed successfully!");
                 return true;
             }
         }
-        System.out.println(bookName + " not found!");
+        System.out.println("⚠️ " +bookName + " not found!");
         return false;
     }
 
     //display
     public void displayBooks() {
         if  (booksList.isEmpty()) {
-            System.out.println("Library is empty!");
+            System.out.println("⚠️ " +"Library is empty!");
         }
-        System.out.println("Library List: ");
+        System.out.println("\n📃 Library List: ");
         Iterator<Books> listBooks = booksList.iterator();
         int counter = 1;
         while (listBooks.hasNext()) {
             Books book = listBooks.next();
-            System.out.println(counter + " . " + book);
+            //System.out.printf("%s.  " + counter + " . " + book.getBookName() + ": " + book.getBookAuthor() + book.getPublicationTime() + book.getBookPrice());
+            System.out.printf("  %s. %s: %s %s %s euros.\n", counter, book.getBookName(), book.getBookAuthor(), book.getPublicationTime(), book.getBookPrice());
             counter++;
         }
     }
@@ -85,9 +86,9 @@ public class Library {
                 .filter(book -> book.getBookAuthor().equalsIgnoreCase(author))
                 .collect(Collectors.toList());
         if (booksFind.isEmpty()) {
-            System.out.println("Books not found!");
+            System.out.println("⚠️ " +"Books not found!");
         }  else {
-            System.out.printf("Find books by %s: %s", author);
+            System.out.printf("🔍 " +"Find books by %s: %s", author);
             booksFind.forEach(book -> System.out.println("-- " + book));
         }
     }
