@@ -75,7 +75,7 @@ public class Library {
         while (listBooks.hasNext()) {
             Books book = listBooks.next();
             //System.out.printf("%s.  " + counter + " . " + book.getBookName() + ": " + book.getBookAuthor() + book.getPublicationTime() + book.getBookPrice());
-            System.out.printf("  %s. %s: %s, %s, - €%s.\n",
+            System.out.printf("  %s. <%s>: '%s', Year: %s, - €%s.\n",
                     counter,
                     book.getBookName(),
                     book.getBookAuthor(),
@@ -96,7 +96,7 @@ public class Library {
         if (booksFind.isEmpty()) {
             System.out.println("⚠️ " +"Books not found!");
         }  else {
-            System.out.printf("\n🔍 " +"Find books by %s: %n", author);
+            System.out.printf("\n🔍 " +"Find books by '%s': %n", author);
             AtomicInteger counter = new AtomicInteger(1);
             booksFind.forEach(book ->
                     System.out.printf("--%s. %s\n",
@@ -104,6 +104,11 @@ public class Library {
                             book)
             );
         }
+    }
+
+    //borrow
+    public void borrowBookByName(String bookName) {
+
     }
 
 }

@@ -50,7 +50,7 @@ public class Books {
 
     @Override
     public String toString() {
-        return String.format("<%s> by %s (%d) - €%.2f", bookName, bookAuthor, publicationTime, bookPrice);
+        return String.format("<%s> by '%s' (%d) - €%.2f", bookName, bookAuthor, publicationTime, bookPrice);
     }
 
 }
