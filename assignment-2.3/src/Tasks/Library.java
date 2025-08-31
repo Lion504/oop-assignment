@@ -1,4 +1,4 @@
-package Task1;
+package Tasks;
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class Library {
     ArrayList<Books> borrowBooksList = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
-    //add
+    //add for another way
     /*public void addBook(String bookName, String bookAuthor, int publicationTime, double price) {
         //need create instance new Books to call Books class
         if (bookName != null && bookAuthor != null) {
@@ -30,6 +30,7 @@ public class Library {
         }
     }*/
 
+    //add
     public void addBook(Books book) {
         if (book == null || book.getBookName() == null || book.getBookAuthor() == null) {
             System.out.println("⚠️ Book Name or Author is required");
@@ -76,14 +77,18 @@ public class Library {
         int counter = 1;
         while (listBooks.hasNext()) {
             Books book = listBooks.next();
+            //just another way
             //System.out.printf("%s.  " + counter + " . " + book.getBookName() + ": " + book.getBookAuthor() + book.getPublicationTime() + book.getBookPrice());
-            System.out.printf("  %s. <%s>: '%s', Year: %s, - €%s.\n",
+            System.out.printf("  %s. <%s>: '%s', Year: %s, - €%s Rate: %s⭐ \n  Review: %s.\n",
                     counter,
                     book.getBookName(),
                     book.getBookAuthor(),
                     book.getPublicationTime(),
-                    book.getBookPrice()
+                    book.getBookPrice(),
+                    book.getRating(),
+                    book.getReview()
             );
+            //just another way
             //System.out.printf("%s. %s\n",counter,book);
             counter++;
         }
@@ -121,7 +126,6 @@ public class Library {
             bookFindByName.forEach(book -> System.out.printf("--%s.", book));
             return true;
         }
-
     }
 
     //borrow
@@ -174,9 +178,96 @@ public class Library {
         } else {
             System.out.println("\nBooks You Borrowed: ");
             borrowBooksList.forEach(book -> System.out.println("-- " + book));
-
-
         }
     }
 
+    //set rate for book
+    public void setRateByBook(String bookName, double rating) {
+        if (bookName == null) {
+            System.out.println("⚠️ Please give a book name!");
+            return;
+        }
+        if (rating < 0.0 || rating > 5.0) {
+            System.out.println("⚠️ Rating must be between 0.0 and 5.0 ⭐");
+            return;
+        }
+
+        for (Books book : booksList) {
+            if (book.getBookName().equalsIgnoreCase(bookName)) {
+                book.setRating(rating);
+                System.out.println("\n✅ Rate added successfully for <" + bookName + ">!");
+                return;
+            }
+        }
+        System.out.println("❌ Book <" + bookName + "> not found in library!");
+    }
+
+    //check rate
+    public boolean bookRateCheck(String bookName) {
+        List<Books> rateCheckByName = booksList.stream()
+                .filter(book -> book.getBookName().equalsIgnoreCase(bookName))
+                .toList();
+        if (rateCheckByName.isEmpty()) {
+            System.out.println("⚠️ Book is not available!");
+            return false;
+        } else {
+            System.out.printf("\n🔍 " + "Current '%s' in Library info: %n", bookName);
+            rateCheckByName.forEach(book -> System.out.printf("--%s.", book));
+            return true;
+        }
+    }
+
+    //set review
+    public void setReviewByBook(String bookName, String review) {
+        if (bookName == null || review == null) {
+            System.out.println("⚠️ Please give a book name or add review!");
+            return;
+        }
+        for (Books book : booksList) {
+            if (book.getBookName().equalsIgnoreCase(bookName)) {
+                book.setReview(review);
+                System.out.println("\n✅ Review added for <" + bookName + ">!");
+                return;
+            }
+        }
+        System.out.println("❌ Book <" + bookName + "> not found in library!");
+    }
+
+    //Average Book Rating already handled in books class
+    public void getAverageBookRating(String bookName) {
+        bookRateCheck(bookName);
+    }
+
+    //Most Reviewed Book
+    public void getMostReviewedBook() {
+        if  (booksList.isEmpty()) {
+            System.out.println("\n⚠️ no books in Library!");
+        }
+        Books mostReviewedBook = null;
+        int maxReviews = 0;
+        Iterator<Books> listBooksReview = booksList.iterator();
+        while (listBooksReview.hasNext()) {
+            Books book = listBooksReview.next();
+            int reviewCount = book.getReview().size();
+            if (reviewCount > maxReviews) {
+                maxReviews = reviewCount;
+                mostReviewedBook = book;
+            }
+        }
+
+        if  (mostReviewedBook == null || maxReviews == 0) {
+            System.out.println("⚠️ no books has been reviewed!");
+        }
+
+        System.out.printf("\n🏆 Most Reviewed Book: <%s> has %d review(s)%n",
+                mostReviewedBook.getBookName(), maxReviews);
+        System.out.println("📖 Book Details: " + mostReviewedBook);
+
+        // Display all reviews
+        System.out.println("📝 Reviews:");
+        List<String> reviews = mostReviewedBook.getReview();
+        for (int i = 0; i < reviews.size(); i++) {
+            System.out.printf("   %d. %s%n", i + 1, reviews.get(i));
+        }
+    }
 }
