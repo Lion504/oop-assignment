@@ -153,6 +153,7 @@ public class Library {
             System.out.println("Borrow for user: " + userName);
             booksList.remove(bookBorrow);
             borrowBooksList.add(bookBorrow);
+            user.borrowBook(bookBorrow);
             System.out.println("🆗 " + userName + " borrowed <" + bookName + "> successfully!");
             return true;
             }

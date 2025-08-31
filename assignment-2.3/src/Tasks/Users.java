@@ -53,7 +53,7 @@ public class Users {
 
     @Override
     public String toString() {
-        return String.format("%s (Age: %d) - Currently borrowed: %d books | Total read: %d books",
+        return String.format("%s (Age: %d) - Currently borrowed: %d books",
                 name, age, borrowedBooks.size());
     }
 }

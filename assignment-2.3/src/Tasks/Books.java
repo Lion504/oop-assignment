@@ -10,7 +10,7 @@ public class Books {
     private int publicationTime;
     private double bookPrice;
     private final List<String> reviews;
-    public final List<Double> ratings;
+    private final List<Double> ratings;
 
 
     public Books(String bookName, String bookAuthor, int publicationTime, double bookPrice) {
@@ -88,7 +88,7 @@ public class Books {
     }
 
 
-    public String getaRatingWithStars() {
+    public String getRateWithStar() {
         double averageRating  = getAverageRating();
         if (averageRating == 0.0) {
             return "No ratings available";
@@ -122,7 +122,7 @@ public class Books {
                 bookAuthor,
                 publicationTime,
                 bookPrice,
-                getaRatingWithStars(),
+                getRateWithStar(),
                 reviewDisplay);
     }
 
