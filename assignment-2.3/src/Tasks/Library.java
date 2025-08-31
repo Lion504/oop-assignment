@@ -1,6 +1,5 @@
 package Tasks;
 
-import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -11,8 +10,6 @@ public class Library {
     ArrayList<Books> booksList = new ArrayList<>();
     ArrayList<Books> borrowBooksList = new ArrayList<>();
     ArrayList<Users> users = new ArrayList<>();
-    Users currentUser = null;
-    Scanner sc = new Scanner(System.in);
 
     //add for another way
     /*public void addBook(String bookName, String bookAuthor, int publicationTime, double price) {
@@ -56,9 +53,9 @@ public class Library {
     //remove by book name
     public boolean removeBook(String bookName) {
         System.out.println(bookName + " Removing... ");
-        Iterator<Books> itrbooks = booksList.iterator();
-        while (itrbooks.hasNext()) {
-            Books book = itrbooks.next();
+        Iterator<Books> itrBooks = booksList.iterator();
+        while (itrBooks.hasNext()) {
+            Books book = itrBooks.next();
             if (book.getBookName().equals(bookName)) {
                 booksList.remove(book);
                 System.out.println("🆗 " + bookName + " removed successfully!");
@@ -185,23 +182,27 @@ public class Library {
 
         // Return the book
         user.returnBook(bookReturn);
-
         borrowBooksList.remove(bookReturn);
-        bookList.add(bookReturn);
-
+        booksList.add(bookReturn);
         System.out.println("🆗 " + userName + " returned <" + bookName + "> successfully!");
         return true;
     }
 
-
-
     //display borrowed book
-    public void displayBorrowBooks() {
+    public void displayBorrowBooksByUser() {
         if (borrowBooksList.isEmpty()) {
             System.out.println("⚠️ You don't have any books to return!");
         } else {
-            System.out.println("\nBooks You Borrowed: ");
-            borrowBooksList.forEach(book -> System.out.println("-- " + book));
+            System.out.println("\n📋 All Borrowed Books:");
+            for (Users user : users) {
+                if (user.getBorrowedBooksCount() > 0) {
+                    System.out.println("\n👾 " + user.getName() + ":");
+                    List<Books> userBooks = user.getBorrowedBooks();
+                    for (int i = 0; i < userBooks.size(); i++) {
+                        System.out.println("   " + (i + 1) + ". " + userBooks.get(i));
+                    }
+                }
+            }
         }
     }
 
@@ -279,19 +280,19 @@ public class Library {
             }
         }
 
-        if  (mostReviewedBook == null || maxReviews == 0) {
+        if  (mostReviewedBook == null) {
             System.out.println("⚠️ no books has been reviewed!");
-        }
+        } else {
+            System.out.printf("\n🏆 Most Reviewed Book: <%s> has %d review(s)%n",
+                    mostReviewedBook.getBookName(), maxReviews);
+            System.out.println("📖 Book Details: " + mostReviewedBook);
 
-        System.out.printf("\n🏆 Most Reviewed Book: <%s> has %d review(s)%n",
-                mostReviewedBook.getBookName(), maxReviews);
-        System.out.println("📖 Book Details: " + mostReviewedBook);
-
-        // Display all reviews
-        System.out.println("📝 Reviews:");
-        List<String> reviews = mostReviewedBook.getReview();
-        for (int i = 0; i < reviews.size(); i++) {
-            System.out.printf("   %d. %s%n", i + 1, reviews.get(i));
+            // Display all reviews
+            System.out.println("📝 Reviews:");
+            List<String> reviews = mostReviewedBook.getReview();
+            for (int i = 0; i < reviews.size(); i++) {
+                System.out.printf("   %d. %s%n", i + 1, reviews.get(i));
+            }
         }
     }
     //add users

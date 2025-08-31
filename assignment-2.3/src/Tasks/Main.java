@@ -21,13 +21,14 @@ public class Main {
         //instance test duplicated
         Books bookTest1 = new Books("The Great Gatsby", "F. Scott Fitzgerald", 1925, 10.75);
         library.addBook(bookTest1); // expected output already in Library
-        /*//instance test rate, not effective way
-        Books bookTest2 = new Books("The Great Gatsby test", "F. Scott Fitzgerald", 1925, 10.75);
-        library.addBook(bookTest2); // expected output already in Library
-        bookTest2.setRating(2.6);
-        bookTest2.setReview("this is a test review, the book is great!");
-        library.displayBooks();*/
 
+
+        // Register users
+        library.registerUser("Johnson", 28);
+        library.registerUser("Smith", 35);
+        library.registerUser("Davis", 22);
+        // Display users
+        library.displayUsers();
 
         //instance test findBookByAuthor
         String author = "George Orwell";
@@ -39,14 +40,14 @@ public class Main {
         //call findBookByAuthor
         library.findBookByAuthor(author);
         //call borrowBookByName
-        library.borrowBookByName(bookTest3);
+        library.borrowBookByName("Smith", bookTest3);
         //call borrowBookByName
-        library.borrowBookByName(bookTest4);
+        library.borrowBookByName("Davis", bookTest4);
         //call displayBorrowBooks
-        library.displayBorrowBooks();
+        library.displayBorrowBooksByUser();
         //call returnBooks
-        library.returnBooks(bookTest3);
-        library.returnBooks(bookTest4);
+        library.returnBooks("Smith",bookTest3);
+        library.returnBooks("Davis",bookTest4);
         //call isBooksAvailable
         library.isBooksAvailable(bookTest3);
         //call setRateByBook
@@ -75,7 +76,5 @@ public class Main {
         library.getAverageBookRating(bookTest3);
         library.getAverageBookRating(bookTest4);
         library.displayBooks();
-
-
     }
 }
