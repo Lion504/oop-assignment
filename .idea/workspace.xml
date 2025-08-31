@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="complete">
-      <change afterPath="$PROJECT_DIR$/assignment-3.1/assignment-3.1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-3.1/src/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="initial">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-3.1/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.1/src/Car.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +58,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "full.screen.before.presentation.mode": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -83,6 +82,7 @@
       <recent name="C:\Users\lehto\IdeaProjects\oop-assignment\assignment-2.2\Task1" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="Task3" />
       <recent name="Task2" />
     </key>
@@ -108,7 +108,7 @@
       <workItem from="1756651178376" duration="2641000" />
       <workItem from="1756655552831" duration="925000" />
       <workItem from="1756656544513" duration="23000" />
-      <workItem from="1756674944347" duration="324000" />
+      <workItem from="1756674944347" duration="3336000" />
     </task>
     <task id="LOCAL-00001" summary="package structure update">
       <option name="closed" value="true" />
@@ -254,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756656260237</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="initial">
+      <option name="closed" value="true" />
+      <created>1756675288182</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1756675288182</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +283,7 @@
     <MESSAGE value="package structure update" />
     <MESSAGE value="update" />
     <MESSAGE value="complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete" />
+    <MESSAGE value="initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial" />
   </component>
 </project>

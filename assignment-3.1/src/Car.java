@@ -3,101 +3,138 @@ public class Car {
 
     private double speed;
     private double gasolineLevel;
-    private String typeName;
+    private String carType;
     private double tankCapacity;
     private boolean cruiseControlOn = false;
     private double cruiseControlSpeed = 0;
     public double maxSpeed;
 
     //constructor Car
-    public Car(String typeName, double initialspeed, double tankCapacity, double maxSpeed) {
-        this.speed = initialspeed;
-        this.typeName = typeName;
-        this.gasolineLevel = 0;
+    public Car(String carType, double tankCapacity, double maxSpeed) {
+        if (tankCapacity <= 0 || maxSpeed <= 0) {
+            throw new IllegalArgumentException("Invalid car info");
+        }
+        this.carType = carType;
         this.tankCapacity = tankCapacity;
         this.maxSpeed = maxSpeed;
-    }
+        this.speed = 0;
+        this.gasolineLevel = 0;
 
-    double getSpeed() {
+    }
+    //getter
+    public double getSpeed() {
         return speed;
     }
-
-    String getTypeName() {
-        return typeName;
+    public String getCarType() {
+        return carType;
     }
-
-    void fillTank() {
-        gasolineLevel = tankCapacity;
+    public double getTankCapacity() {
+        return tankCapacity;
     }
-
+    public double getMaxSpeed() {
+        return maxSpeed;
+    }
     double getGasolineLevel() {
         return gasolineLevel;
+    }
+    //get target speed
+    double getCruiseControlSpeed() {
+        return cruiseControlSpeed;
+    }
+
+    //setter
+    public void setCarType(String carType) {
+        this.carType = carType;
+    }
+    public void setTankCapacity(double tankCapacity) {
+        this.tankCapacity = tankCapacity;
+    }
+    public void setMaxSpeed(double maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+    //set targetspeed
+    void setCruiseControlSpeed(double targetSpeed) {
+        cruiseControlSpeed = targetSpeed;
+    }
+
+    //condition check
+    boolean isCruiseControlOn() {
+        return cruiseControlOn;
+    }
+
+    //helper check gas
+    private boolean hasGasoline() {
+        return gasolineLevel > 0;
+    }
+
+    //helper use Gasoline
+    private void useGasoline(double amount) {
+        gasolineLevel = Math.max(0, gasolineLevel - amount);
+        if (!hasGasoline()) {
+            speed = 0; // stops no fuel
+            turnCruiseControlOff();
+        }
+    }
+
+    //add fuel
+    public void addGasoline(double amount) {
+        gasolineLevel = Math.min(tankCapacity, gasolineLevel + amount);
     }
 
     //accelerate
     public void accelerate(int accelerateRate) {
-        if (gasolineLevel > 0 || accelerateRate > 0) {
-            if (speed < maxSpeed) {
-                speed += accelerateRate;
-            } else if  (speed >= maxSpeed) {
-                speed = maxSpeed;
-            }
-        } else
-            speed = 0;
+        if (!hasGasoline() && accelerateRate > 0) {
+            speed = Math.min(speed + accelerateRate, maxSpeed);//prevent over speed
+            useGasoline(accelerateRate * 0.1);
+        }
     }
 
     //decelerate
-    void decelerate(int decelerateRate) {
-        if (gasolineLevel > 0 || decelerateRate > 0) {
-            speed = Math.max(0, speed - decelerateRate);//prevent negative value
-        } else
+    public void decelerate(int decelerateRate) {
+        if (!hasGasoline() || decelerateRate <= 0) {
             speed = 0;
-
+            return;
+        }
+        speed = Math.max(0, speed - decelerateRate);//prevent negative value
     }
 
-    //condition turn on cruisecontrol
+    //turn on cruisecontrol
     public boolean turnCruiseControlOn() {
         double minCruiseControlSpeed = 30;
-        double maxCruiseControlSpeed = 120;
+        double maxCruiseControlSpeed = 150;
+        if (cruiseControlSpeed == 0) { cruiseControlSpeed = speed; }
         if (cruiseControlSpeed < minCruiseControlSpeed || cruiseControlSpeed > maxCruiseControlSpeed) {
             return false;
         }
-        if (gasolineLevel <= 0 || speed <= 0 ) {
+        if (!hasGasoline() || speed <= 0) {
             return false;
         }
         cruiseControlOn = true;
         return true;
     }
 
+    //turn Off cruisecontrol
     void turnCruiseControlOff() {
         cruiseControlOn = false;
-    }
-
-    //set targetspeed
-    void setCruiseControlSpeed(double targetSpeed) {
-        cruiseControlSpeed = targetSpeed;
-    }
-
-    //get target speed
-    double getCruiseControlSpeed() {
-        return cruiseControlSpeed;
-    }
-
-    //condition
-    boolean isCruiseControlOn() {
-        return cruiseControlOn;
     }
 
     //speed change when cruise control on
     void speedChange() {
         if (!cruiseControlOn) return;
 
-        if (speed < cruiseControlSpeed) {
-            accelerate(10);
-        } else if (speed > cruiseControlSpeed) {
-            decelerate(10);
+        double speedDifference = cruiseControlSpeed - speed;
+
+        if (Math.abs(speedDifference) <= 1) {
+            speed = cruiseControlSpeed;
+        } else if (speedDifference > 0) {
+            int adjustRate = Math.min(10, (int)speedDifference);
+            accelerate(adjustRate);
+        } else {
+            int adjustRate = Math.min(10, (int)Math.abs(speedDifference));
+            decelerate(adjustRate);
         }
-        if (gasolineLevel <= 0) {
+
+        if (!hasGasoline()) {
             turnCruiseControlOff();
         }
     }
