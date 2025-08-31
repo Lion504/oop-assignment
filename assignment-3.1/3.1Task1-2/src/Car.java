@@ -1,13 +1,13 @@
 
 public class Car {
 
-    private double speed;
-    private double gasolineLevel;
-    private String carType;
-    private double tankCapacity;
-    private boolean cruiseControlOn = false;
-    private double cruiseControlSpeed = 0;
-    public double maxSpeed;
+    protected double speed;
+    protected double gasolineLevel;
+    private  String carType;
+    private  double tankCapacity;
+    private  boolean cruiseControlOn = false;
+    private  double cruiseControlSpeed = 0;
+    public  double maxSpeed;
 
     //constructor Car
     public Car(String carType, double tankCapacity, double maxSpeed) {
@@ -34,11 +34,11 @@ public class Car {
     public double getMaxSpeed() {
         return maxSpeed;
     }
-    double getGasolineLevel() {
+    public double getGasolineLevel() {
         return gasolineLevel;
     }
     //get target speed
-    double getCruiseControlSpeed() {
+    public double getCruiseControlSpeed() {
         return cruiseControlSpeed;
     }
 
@@ -53,22 +53,22 @@ public class Car {
         this.maxSpeed = maxSpeed;
     }
     //set targetspeed
-    void setCruiseControlSpeed(double targetSpeed) {
+    public void setCruiseControlSpeed(double targetSpeed) {
         cruiseControlSpeed = targetSpeed;
     }
 
     //condition check
-    boolean isCruiseControlOn() {
+    public boolean isCruiseControlOn() {
         return cruiseControlOn;
     }
 
     //helper check gas
-    private boolean hasGasoline() {
+    protected boolean hasGasoline() {
         return gasolineLevel > 0;
     }
 
     //helper use Gasoline
-    private void useGasoline(double amount) {
+    protected void useGasoline(double amount) {
         gasolineLevel = Math.max(0, gasolineLevel - amount);
         if (!hasGasoline()) {
             speed = 0; // stops no fuel
@@ -83,7 +83,7 @@ public class Car {
 
     //accelerate
     public void accelerate(int accelerateRate) {
-        if (!hasGasoline() && accelerateRate > 0) {
+        if (hasGasoline() && accelerateRate > 0) {
             speed = Math.min(speed + accelerateRate, maxSpeed);//prevent over speed
             useGasoline(accelerateRate * 0.1);
         }
@@ -91,7 +91,7 @@ public class Car {
 
     //decelerate
     public void decelerate(int decelerateRate) {
-        if (!hasGasoline() || decelerateRate <= 0) {
+        if (decelerateRate <= 0) {
             speed = 0;
             return;
         }
