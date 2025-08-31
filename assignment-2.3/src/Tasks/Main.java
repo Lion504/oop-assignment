@@ -50,8 +50,12 @@ public class Main {
         //call isBooksAvailable
         library.isBooksAvailable(bookTest3);
         //call setRateByBook
+        library.setRateByBook(bookTest3, 4.0);
         library.setRateByBook(bookTest3, 3.5);
-        library.setRateByBook(bookTest3, 3.5);
+        library.setRateByBook(bookTest3, 4.5);
+        library.setRateByBook(bookTest4, 4.9);
+        library.setRateByBook(bookTest4, 3.5);
+        library.setRateByBook(bookTest4, 4.5);
         //call bookRateCheck
         library.bookRateCheck(bookTest3);
         //call setReviewByBook
@@ -69,6 +73,9 @@ public class Main {
         library.getMostReviewedBook();
         //call getAverageBookRating
         library.getAverageBookRating(bookTest3);
+        library.getAverageBookRating(bookTest4);
+        library.displayBooks();
+
 
     }
 }

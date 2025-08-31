@@ -10,6 +10,8 @@ public class Library {
     //<Books> corresponded with Books Objects which have setter and getter
     ArrayList<Books> booksList = new ArrayList<>();
     ArrayList<Books> borrowBooksList = new ArrayList<>();
+    ArrayList<Users> users = new ArrayList<>();
+    Users currentUser = null;
     Scanner sc = new Scanner(System.in);
 
     //add for another way
@@ -30,7 +32,7 @@ public class Library {
         }
     }*/
 
-    //add
+    //add books
     public void addBook(Books book) {
         if (book == null || book.getBookName() == null || book.getBookAuthor() == null) {
             System.out.println("⚠️ Book Name or Author is required");
@@ -85,7 +87,7 @@ public class Library {
                     book.getBookAuthor(),
                     book.getPublicationTime(),
                     book.getBookPrice(),
-                    book.getRating(),
+                    book.getAverageRating(),// or getRatingWithStars()
                     book.getReview()
             );
             //just another way
@@ -129,7 +131,18 @@ public class Library {
     }
 
     //borrow
-    public boolean borrowBookByName(String bookName) {
+    public boolean borrowBookByName(String userName, String bookName) {
+        //find user
+        Users user = findUser(userName);
+        if (user == null) {
+            System.out.println("❌ User '" + userName + "' not found!");
+            return false;
+        }
+        if (user.hasBorrowedBook(bookName)) {
+            System.out.println("⚠️ " + userName + " already has <" + bookName + "> book!");
+            return false;
+        }
+        //find book
         List<Books> bookFind = booksList.stream()
                 .filter(book -> book.getBookName().equalsIgnoreCase(bookName))
                 .toList();
@@ -140,36 +153,47 @@ public class Library {
             System.out.printf("\n🔍 " + "Borrow system search book '%s' in Library: %n", bookName);
             Books bookBorrow = bookFind.get(0);//get(0) means just get first match value
             System.out.printf("-- %s\n", bookBorrow);
-            System.out.println("Do you want borrow this book? (y/n)");
-            String borrowCondition = sc.nextLine();
-            if (borrowCondition != null && borrowCondition.equalsIgnoreCase("y")) {
-                booksList.remove(bookBorrow);
-                borrowBooksList.add(bookBorrow);
-                System.out.println("🆗 You borrowed <" + bookName + "> successfully!");
-                return true;
-            } else {
-                System.out.println("⚠️ <" + bookName + "> borrow refused!");
-                return false;
+            System.out.println("Borrow for user: " + userName);
+            booksList.remove(bookBorrow);
+            borrowBooksList.add(bookBorrow);
+            System.out.println("🆗 " + userName + " borrowed <" + bookName + "> successfully!");
+            return true;
             }
         }
-    }
 
     //return book
-    public boolean returnBooks(String bookName) {
-        List<Books> borrowBookFind = borrowBooksList.stream()
-                .filter(book -> book.getBookName().equalsIgnoreCase(bookName))
-                .toList();
-        if (borrowBookFind.isEmpty()) {
-            System.out.printf("⚠️ You don't have <%s> books to return!", bookName);
+    public boolean returnBooks(String userName, String bookName) {
+        Users user = findUser(userName);
+        if (user == null) {
+            System.out.println("❌ User '" + userName + "' not found!");
             return false;
-        } else {
-            Books bookReturn = borrowBookFind.get(0);
-            borrowBooksList.remove(bookReturn);
-            booksList.add(bookReturn);
-            System.out.println("\n🆗 You returned <" + bookName + "> successfully!");
-            return true;
         }
+
+        // Find book in user borrowed list
+        Books bookReturn = null;
+        for (Books book : user.getBorrowedBooks()) {
+            if (book.getBookName().equalsIgnoreCase(bookName)) {
+                bookReturn = book;
+                break;
+            }
+        }
+
+        if (bookReturn == null) {
+            System.out.printf("⚠️ %s doesn't have <%s> to return!%n", userName, bookName);
+            return false;
+        }
+
+        // Return the book
+        user.returnBook(bookReturn);
+
+        borrowBooksList.remove(bookReturn);
+        bookList.add(bookReturn);
+
+        System.out.println("🆗 " + userName + " returned <" + bookName + "> successfully!");
+        return true;
     }
+
+
 
     //display borrowed book
     public void displayBorrowBooks() {
@@ -270,4 +294,35 @@ public class Library {
             System.out.printf("   %d. %s%n", i + 1, reviews.get(i));
         }
     }
+    //add users
+    public void registerUser(String name, int age) {
+        for (Users user : users) {
+            if (user.getName().equalsIgnoreCase(name)) {
+                System.out.println("⚠️ User '" + name + "' already registered!");
+                return;
+            }
+        }
+        Users newUser = new Users(name, age);
+        users.add(newUser);
+        System.out.println("✅ User '" + name + "' registered successfully!");
+    }
+    //find user
+    private Users findUser(String name) {
+        return users.stream()
+                .filter(user -> user.getName().equalsIgnoreCase(name))
+                .findFirst()
+                .orElse(null);
+    }
+    //displayUsers
+    public void displayUsers() {
+        if (users.isEmpty()) {
+            System.out.println("⚠️ No users registered!");
+            return;
+        }
+        System.out.println("\n📃 Registered Users:");
+        for (int i = 0; i < users.size(); i++) {
+            System.out.println((i + 1) + ". " + users.get(i));
+        }
+    }
+
 }
