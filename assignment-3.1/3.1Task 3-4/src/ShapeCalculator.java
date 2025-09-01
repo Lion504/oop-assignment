@@ -1,43 +1,30 @@
 
 public class ShapeCalculator {
-    public static class EnhancedShapeCalculator {
         public static void main(String[] args) {
             // Create array of Shape objects with colors
             Shape[] shapes = {
-                    new Circle(5.0),
+                    new Shape.Circle(5.0, "Purple"),
                     new Shape.Rectangle(4.0, 6.0, "Blue"),
                     new Shape.Triangle(3.0, 8.0, "Green"),
-                    new Circle(3.5),
-                    new Shape.Rectangle(2.5, 7.0, "Purple")
             };
-
-            System.out.println("Enhanced Shape Calculator with Colors\n");
-
+            System.out.println("Shape Calculator\n");
             // Display each shape with its color and area
             for (Shape shape : shapes) {
                 double area = shape.calculateArea();
                 System.out.printf("Area of %s: %.2f%n", shape.toString(), area);
             }
 
-            // Demonstrate polymorphism by calling methods on Shape references
-            System.out.println("\n--- Polymorphism Demonstration ---");
-            demonstratePolymorphism(shapes);
-
-            // Display color statistics
-            System.out.println("\n--- Color Statistics ---");
-            displayColorStatistics(shapes);
         }
 
-        // Method demonstrating polymorphism
-        private static void demonstratePolymorphism(Shape[] shapes) {
+        // Method demonstrate polymorphism
+        public static void demonstratePolymorphism(Shape[] shapes) {
             double totalArea = 0;
 
             for (Shape shape : shapes) {
-                // The correct calculateArea() method is called based on the actual object type
                 double area = shape.calculateArea();
                 totalArea += area;
 
-                // Display shape type using instanceof
+                // Display shape
                 String shapeType = "";
                 if (shape instanceof Circle) {
                     shapeType = "Circle";
@@ -53,8 +40,8 @@ public class ShapeCalculator {
             System.out.printf("Total area of all shapes: %.2f%n", totalArea);
         }
 
-        // Method to display color statistics
-        private static void displayColorStatistics(Shape[] shapes) {
+        // display color statistics
+        public static void displayColorStatistics(Shape[] shapes) {
             java.util.Map<String, Integer> colorCount = new java.util.HashMap<>();
             java.util.Map<String, Double> colorTotalArea = new java.util.HashMap<>();
 
@@ -72,6 +59,6 @@ public class ShapeCalculator {
                         color, colorCount.get(color), colorTotalArea.get(color));
             }
         }
-    }
 
-}
+
+    }
