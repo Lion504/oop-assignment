@@ -54,7 +54,7 @@ public abstract class AbstractVehicle implements Vehicle {
 
     public void addGasoline(double amount) {
         gasolineLevel = Math.min(tankCapacity, gasolineLevel + amount);
-        System.out.println(type + " Filling gasoline...\n" + amount + "L gasoline filled!");
+        System.out.println(type + " Filling gasoline...\n" + gasolineLevel + "L gasoline filled!");
     }
 
     protected void useGasoline(double amount) {

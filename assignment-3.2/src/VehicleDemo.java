@@ -41,7 +41,7 @@ public class VehicleDemo {
                 AbstractVehicle av = (AbstractVehicle) vehicle;
                 System.out.printf("Fuel before: %.1f/%.1f L%n",
                         av.getGasolineLevel(), av.getTankCapacity());
-                av.addGasoline(30);
+                av.addGasoline(50);
                 System.out.printf("Fuel after: %.1f/%.1f L%n",
                         av.getGasolineLevel(), av.getTankCapacity());
             }
@@ -87,10 +87,10 @@ public class VehicleDemo {
 
 
             // Display fuel efficiency
-            System.out.printf("Distance traveled: %.1f km%n",
+            /*System.out.printf("Distance traveled: %.1f km%n",
                     ((AbstractVehicle) vehicle).getTotalDistance());
             System.out.printf("Operating time: %.1f hours%n",
-                    ((AbstractVehicle) vehicle).getTotalFuelConsumed());
+                    ((AbstractVehicle) vehicle).getTotalFuelConsumed());*/
             System.out.printf("\nFuel Efficiency: %.1f %s%n",
                             vehicle.calculateFuelEfficiency(),
             vehicle instanceof ECar || vehicle instanceof EMotorcycle ? "kWh/100km" : "L/100km");
