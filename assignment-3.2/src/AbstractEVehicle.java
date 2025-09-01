@@ -2,6 +2,7 @@ public abstract class AbstractEVehicle extends AbstractVehicle implements EVehic
     protected double batteryLevel;
     protected double batteryCapacity;
     protected double totalElectricityConsumed = 0;
+
     public AbstractEVehicle(String type,
                             String engineType,
                             String color,
@@ -46,7 +47,7 @@ public abstract class AbstractEVehicle extends AbstractVehicle implements EVehic
             int acceleration;
             double consumptionRate;
 
-            switch(type.toLowerCase()) {
+            switch (type.toLowerCase()) {
                 case "electric car":
                     acceleration = 35;
                     consumptionRate = 0.18;
@@ -94,7 +95,6 @@ public abstract class AbstractEVehicle extends AbstractVehicle implements EVehic
     }
 
 
-
     //separate EV part for different condition check
     @Override
     public String getInfo() {
@@ -103,9 +103,18 @@ public abstract class AbstractEVehicle extends AbstractVehicle implements EVehic
     }
 
     // Common getters for electric vehicles
-    public double getBatteryLevel() { return batteryLevel; }
-    public double getBatteryCapacity() { return batteryCapacity; }
-    public double getTotalElectricityConsumed() { return totalElectricityConsumed; }
+    public double getBatteryLevel() {
+        return batteryLevel;
+    }
+
+    public double getBatteryCapacity() {
+        return batteryCapacity;
+    }
+
+    public double getTotalElectricityConsumed() {
+        return totalElectricityConsumed;
+    }
+
     // Override to prevent gasoline-related operations
     @Override
     public void addGasoline(double amount) {

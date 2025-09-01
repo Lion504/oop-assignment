@@ -48,7 +48,7 @@ public abstract class AbstractVehicle implements Vehicle {
         if (totalFuelConsumed == 0) {
             return fuelEfficiency; // Return stored value
         }
-        return (totalFuelConsumed / totalDistance )*100;
+        return (totalFuelConsumed / totalDistance) * 100;
     }
 
 
@@ -56,6 +56,7 @@ public abstract class AbstractVehicle implements Vehicle {
         gasolineLevel = Math.min(tankCapacity, gasolineLevel + amount);
         System.out.println(type + " Filling gasoline...\n" + amount + "L gasoline filled!");
     }
+
     protected void useGasoline(double amount) {
         gasolineLevel = Math.max(0, gasolineLevel - amount);
         if (gasolineLevel <= 0) {
@@ -63,13 +64,14 @@ public abstract class AbstractVehicle implements Vehicle {
             running = false;
         }
     }
-//still problem
+
+    //still problem
     public void accelerate() {
         if (gasolineLevel > 0 && running) {
             int acceleration;
             double consumptionRate;
 
-            switch(type.toLowerCase()) {
+            switch (type.toLowerCase()) {
                 case "car":
                     acceleration = 30;
                     consumptionRate = 0.08;
@@ -121,17 +123,49 @@ public abstract class AbstractVehicle implements Vehicle {
     }
 
     // Getters
-    public double getSpeed() { return speed; }
-    public double getGasolineLevel() { return gasolineLevel; }
-    public double getTankCapacity() { return tankCapacity; }
-    public double getMaxSpeed() { return maxSpeed; }
-    public String getType() { return type; }
-    public String getEngineType() { return engineType; }
-    public String getColor() { return color; }
-    public boolean isRunning() { return running; }
-    public double getTotalDistance() { return totalDistance; }
-    public double getTotalFuelConsumed() { return totalFuelConsumed; }
-    public double getOperatingTime() { return operatingTime; }
+    public double getSpeed() {
+        return speed;
+    }
+
+    public double getGasolineLevel() {
+        return gasolineLevel;
+    }
+
+    public double getTankCapacity() {
+        return tankCapacity;
+    }
+
+    public double getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getEngineType() {
+        return engineType;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+
+    public double getTotalDistance() {
+        return totalDistance;
+    }
+
+    public double getTotalFuelConsumed() {
+        return totalFuelConsumed;
+    }
+
+    public double getOperatingTime() {
+        return operatingTime;
+    }
 
 
 }
