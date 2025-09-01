@@ -4,20 +4,17 @@ public class VehicleDemo {
 
         // Create instances of all vehicle types
         Vehicle[] vehicles = {
-                new Car("Red", 6.7, 50),
-                new Motorcycle("Black", 1.5, 10),
+                new Car("Red", 6.7),
+                new Motorcycle("Black", 1.5),
                 new Bus("Yellow", 11.2, 100),
                 new ECar("Blue", 8.0),
                 new EMotorcycle("White", 3.0)
         };
 
-
         // Test each vehicle
         for (Vehicle vehicle : vehicles) {
             //
             AbstractVehicle abVehicle = (AbstractVehicle) vehicle;
-
-
             System.out.println("\n=== Start Testing " + abVehicle.getType() + " ===");
             System.out.println("-".repeat(50));
             System.out.println(vehicle.getInfo());
@@ -85,15 +82,10 @@ public class VehicleDemo {
                     ((AbstractVehicle) vehicle).getType(),
                     ((AbstractVehicle) vehicle).isRunning());
 
-
             // Display fuel efficiency
-            /*System.out.printf("Distance traveled: %.1f km%n",
-                    ((AbstractVehicle) vehicle).getTotalDistance());
-            System.out.printf("Operating time: %.1f hours%n",
-                    ((AbstractVehicle) vehicle).getTotalFuelConsumed());*/
             System.out.printf("\nFuel Efficiency: %.1f %s%n",
-                            vehicle.calculateFuelEfficiency(),
-            vehicle instanceof ECar || vehicle instanceof EMotorcycle ? "kWh/100km" : "L/100km");
+                    vehicle.calculateFuelEfficiency(),
+                    vehicle instanceof ECar || vehicle instanceof EMotorcycle ? "km/kWh" : "km/L");
         }
     }
 }

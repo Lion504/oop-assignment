@@ -42,6 +42,7 @@ public abstract class AbstractEVehicle extends AbstractVehicle implements EVehic
     }
 
     //separate EV part for different condition
+    @Override
     public void accelerate() {
         if (batteryLevel > 0 && running) {
             int acceleration;
@@ -91,7 +92,7 @@ public abstract class AbstractEVehicle extends AbstractVehicle implements EVehic
         if (totalElectricityConsumed == 0) {
             return fuelEfficiency; // Return stored value if no consumption yet
         }
-        return (totalElectricityConsumed / totalDistance) * 100;
+        return totalDistance / totalElectricityConsumed;
     }
 
 

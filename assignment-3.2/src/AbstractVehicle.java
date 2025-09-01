@@ -13,8 +13,7 @@ public abstract class AbstractVehicle implements Vehicle {
     protected double tankCapacity;
     protected double maxSpeed;
 
-    public AbstractVehicle(String type, String engineType, String color,
-                           double fuelEfficiency, double tankCapacity, double maxSpeed) {
+    public AbstractVehicle(String type, String engineType, String color, double fuelEfficiency, double tankCapacity, double maxSpeed) {
         this.type = type;
         this.engineType = engineType;
         this.color = color;
@@ -48,7 +47,8 @@ public abstract class AbstractVehicle implements Vehicle {
         if (totalFuelConsumed == 0) {
             return fuelEfficiency; // Return stored value
         }
-        return (totalFuelConsumed / totalDistance) * 100;
+        //return (totalFuelConsumed / totalDistance) * 100;
+        return totalDistance / totalFuelConsumed;
     }
 
 
@@ -65,7 +65,7 @@ public abstract class AbstractVehicle implements Vehicle {
         }
     }
 
-    //still problem
+    //still not really correct
     public void accelerate() {
         if (gasolineLevel > 0 && running) {
             int acceleration;
@@ -83,6 +83,7 @@ public abstract class AbstractVehicle implements Vehicle {
                 case "bus":
                     acceleration = 15;
                     consumptionRate = 0.15;
+                    break;
                 default:
                     acceleration = 20;
                     consumptionRate = 0.1;
@@ -121,7 +122,6 @@ public abstract class AbstractVehicle implements Vehicle {
         return String.format("Car Information:\nType: %s\nFuel: %s\nColor: %s\nTank Capacity: %.1f L\nMax Speed: %.1f km/h",
                 type, engineType, color, tankCapacity, maxSpeed);
     }
-
     // Getters
     public double getSpeed() {
         return speed;

@@ -4,6 +4,7 @@ public class Bus extends AbstractVehicle {
 
     public Bus(String color, double fuelEfficiency, int capacity) {
         super("Bus", "Diesel", color, fuelEfficiency, 200.0, 120.0);
+        this.capacity = capacity;
         this.passengerCount = 0;
     }
 

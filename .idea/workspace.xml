@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-3.2/src/AbstractEVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.2/src/AbstractEVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-3.2/src/AbstractVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.2/src/AbstractVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-3.2/src/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.2/src/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-3.2/src/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.2/src/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-3.2/src/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.2/src/Motorcycle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment-3.2/src/VehicleDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.2/src/VehicleDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +123,7 @@
       <workItem from="1756682622572" duration="4061000" />
       <workItem from="1756714114690" duration="7891000" />
       <workItem from="1756730165000" duration="3795000" />
-      <workItem from="1756735795527" duration="16394000" />
+      <workItem from="1756735795527" duration="17336000" />
     </task>
     <task id="LOCAL-00001" summary="package structure update">
       <option name="closed" value="true" />
@@ -375,7 +381,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756753568405</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update">
+      <option name="closed" value="true" />
+      <created>1756754208572</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1756754208572</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,9 +418,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/assignment-3.2/src/AbstractVehicle.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="31" />
+          <url>file://$PROJECT_DIR$/assignment-3.2/src/VehicleDemo.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
