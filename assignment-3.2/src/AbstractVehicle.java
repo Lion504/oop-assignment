@@ -71,18 +71,18 @@ public abstract class AbstractVehicle implements Vehicle {
 
             switch(type.toLowerCase()) {
                 case "car":
-                    acceleration = 40;
-                    consumptionRate = 0.05;    // 5% fuel consumption
+                    acceleration = 30;
+                    consumptionRate = 0.08;
                     break;
                 case "motorcycle":
-                    acceleration = 80;
-                    consumptionRate = 0.01;
+                    acceleration = 40;
+                    consumptionRate = 0.05;
                     break;
                 case "bus":
-                    acceleration = 25;
-                    consumptionRate = 0.09;
+                    acceleration = 15;
+                    consumptionRate = 0.15;
                 default:
-                    acceleration = 10;
+                    acceleration = 20;
                     consumptionRate = 0.1;
             }
 
@@ -100,7 +100,7 @@ public abstract class AbstractVehicle implements Vehicle {
             // Calculate consumption
             double fuelUsed = acceleration * timeIncrement * consumptionRate;
             useGasoline(fuelUsed);
-            totalFuelConsumed = fuelUsed;
+            totalFuelConsumed += fuelUsed;
 
         } else if (gasolineLevel <= 0) {
             System.out.println(type + " cannot accelerate - no fuel!");

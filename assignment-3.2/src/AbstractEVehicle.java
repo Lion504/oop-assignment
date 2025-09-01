@@ -1,7 +1,7 @@
 public abstract class AbstractEVehicle extends AbstractVehicle implements EVehicle {
     protected double batteryLevel;
     protected double batteryCapacity;
-
+    protected double totalElectricityConsumed = 0;
     public AbstractEVehicle(String type,
                             String engineType,
                             String color,
@@ -41,16 +41,59 @@ public abstract class AbstractEVehicle extends AbstractVehicle implements EVehic
     }
 
     //separate EV part for different condition
-    public void accelerate(int accelerateRate) {
-        if (batteryLevel > 0 && accelerateRate > 0 && running) {
-            speed = Math.min(speed + accelerateRate, maxSpeed);
-            useElectricity(accelerateRate * 0.2); //will use Electricity
+    public void accelerate() {
+        if (batteryLevel > 0 && running) {
+            int acceleration;
+            double consumptionRate;
+
+            switch(type.toLowerCase()) {
+                case "electric car":
+                    acceleration = 35;
+                    consumptionRate = 0.18;
+                    break;
+                case "electric motorcycle":
+                    acceleration = 45;
+                    consumptionRate = 0.12;
+                    break;
+                default:
+                    acceleration = 25;
+                    consumptionRate = 0.2;
+            }
+
+            int actualRate = acceleration;
+
+            double previousSpeed = speed;
+            speed = Math.min(speed + acceleration, maxSpeed);
+
+            double timeIncrement = 1.0;
+            operatingTime += timeIncrement;
+
+            double avgSpeed = (previousSpeed + speed) / 2.0;
+            double distance = avgSpeed * timeIncrement;
+            totalDistance += distance;
+
+            double electricityUsed = actualRate * timeIncrement * consumptionRate;
+            useElectricity(electricityUsed);
+            totalElectricityConsumed += electricityUsed;
+
+
         } else if (batteryLevel <= 0) {
             System.out.println(type + " cannot accelerate - no fuel!");
         } else {
             System.out.println(type + " cannot accelerate - Stopped");
         }
     }
+
+    //separate EV part for different condition check
+    @Override
+    public double calculateFuelEfficiency() {
+        if (totalElectricityConsumed == 0) {
+            return fuelEfficiency; // Return stored value if no consumption yet
+        }
+        return (totalElectricityConsumed / totalDistance) * 100;
+    }
+
+
 
     //separate EV part for different condition check
     @Override
@@ -62,7 +105,7 @@ public abstract class AbstractEVehicle extends AbstractVehicle implements EVehic
     // Common getters for electric vehicles
     public double getBatteryLevel() { return batteryLevel; }
     public double getBatteryCapacity() { return batteryCapacity; }
-
+    public double getTotalElectricityConsumed() { return totalElectricityConsumed; }
     // Override to prevent gasoline-related operations
     @Override
     public void addGasoline(double amount) {

@@ -53,10 +53,27 @@ public class VehicleDemo {
                     ((AbstractVehicle) vehicle).getType(),
                     ((AbstractVehicle) vehicle).isRunning());
             // accelerate
-            ((AbstractVehicle) vehicle).accelerate();
-            System.out.printf("After acceleration - Speed: %.1f km/h (Max: %.1f km/h)%n",
-                    ((AbstractVehicle) vehicle).getSpeed(),
-                    ((AbstractVehicle) vehicle).getMaxSpeed());
+            System.out.println("\nDriving simulation:");
+            for (int cycle = 1; cycle <= 3; cycle++) {
+                ((AbstractVehicle) vehicle).accelerate();
+                System.out.printf("Cycle %d: Speed=%.1f km/h, Distance=%.1f km%n",
+                        cycle, ((AbstractVehicle) vehicle).getSpeed(),
+                        ((AbstractVehicle) vehicle).getTotalDistance());
+            }
+
+            // Display detailed results
+            AbstractVehicle av = (AbstractVehicle) vehicle;
+            System.out.printf("Final Results:%n");
+            System.out.printf("- Total Distance: %.1f km%n", av.getTotalDistance());
+            System.out.printf("- Operating Time: %.1f hours%n", av.getOperatingTime());
+
+            if (vehicle instanceof ECar || vehicle instanceof EMotorcycle) {
+                AbstractEVehicle ev = (AbstractEVehicle) vehicle;
+                System.out.printf("- Electricity Used: %.2f kWh%n", ev.getTotalElectricityConsumed());
+            } else {
+                System.out.printf("- Fuel Used: %.2f L%n", av.getTotalFuelConsumed());
+            }
+
             // decelerate
             ((AbstractVehicle) vehicle).decelerate(30);
             System.out.printf("After decelerate - Speed: %.1f km/h (Max: %.1f km/h)%n",
@@ -68,7 +85,6 @@ public class VehicleDemo {
                     ((AbstractVehicle) vehicle).getType(),
                     ((AbstractVehicle) vehicle).isRunning());
 
-            //System.out.println("\n" + ((AbstractVehicle) vehicle).getGasolineLevel());
 
             // Display fuel efficiency
             System.out.printf("Distance traveled: %.1f km%n",
