@@ -63,7 +63,7 @@ public abstract class AbstractVehicle implements Vehicle {
             running = false;
         }
     }
-
+//still problem
     public void accelerate() {
         if (gasolineLevel > 0 && running) {
             int acceleration;

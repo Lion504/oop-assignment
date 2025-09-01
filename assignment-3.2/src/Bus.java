@@ -3,8 +3,7 @@ public class Bus extends AbstractVehicle {
     private int passengerCount;
 
     public Bus(String color, double fuelEfficiency, int capacity) {
-        super("Bus", "Diesel", color, fuelEfficiency, 200.0, 120.0); // 200L tank, 120 max speed
-        this.capacity = capacity;
+        super("Bus", "Diesel", color, fuelEfficiency, 200.0, 120.0);
         this.passengerCount = 0;
     }
 
