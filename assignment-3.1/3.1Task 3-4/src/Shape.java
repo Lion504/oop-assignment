@@ -43,7 +43,9 @@ public class Shape {
         public double calculateArea() {
             return Math.PI * radius * radius;
         }
-
+        public double getRadius() {
+            return radius;
+        }
         @Override
         public String toString() {
             return color + " Circle with radius " + radius;

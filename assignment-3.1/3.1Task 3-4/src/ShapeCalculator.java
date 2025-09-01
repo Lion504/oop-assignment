@@ -26,7 +26,7 @@ public class ShapeCalculator {
 
                 // Display shape
                 String shapeType = "";
-                if (shape instanceof Circle) {
+                if (shape instanceof Shape.Circle) {
                     shapeType = "Circle";
                 } else if (shape instanceof Shape.Rectangle) {
                     shapeType = "Rectangle";
