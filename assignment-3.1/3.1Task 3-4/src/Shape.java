@@ -1,10 +1,6 @@
 public class Shape {
     protected String color;
 
-    public Shape() {
-        this.color = "Unknown";
-    }
-
     public Shape(String color) {
         this.color = color != null ? color : "Unknown";
     }
@@ -14,14 +10,11 @@ public class Shape {
         return 0;
     }
 
-    // Getter and setter for color
+    // Getter for color
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color != null ? color : "Unknown";
-    }
 
     @Override
     public String toString() {
@@ -54,8 +47,8 @@ public class Shape {
 
 
     public static class Rectangle extends Shape {
-        private double width;
-        private double height;
+        private final double width;
+        private final double height;
 
         public Rectangle(double width, double height, String color) {
             super(color);
