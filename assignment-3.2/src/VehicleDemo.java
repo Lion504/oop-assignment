@@ -26,7 +26,6 @@ public class VehicleDemo {
 
             // Add fuel/charge
             if (vehicle instanceof ECar || vehicle instanceof EMotorcycle) {
-                //why just can put here?
                 EVehicle ev = (EVehicle) vehicle;
 
                 System.out.printf("Battery before charge: %.1f/%.1f kWh%n",
