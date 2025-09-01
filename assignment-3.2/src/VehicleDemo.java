@@ -4,11 +4,11 @@ public class VehicleDemo {
 
         // Create instances of all vehicle types
         Vehicle[] vehicles = {
-                new Car("Red", 25.0),
-                new Motorcycle("Black", 45.0),
-                new Bus("Yellow", 10.0, 40),
-                new ECar("Blue", 120.0),
-                new EMotorcycle("White", 80.0)
+                new Car("Red", 6.7, 50),
+                new Motorcycle("Black", 1.5, 10),
+                new Bus("Yellow", 11.2, 100),
+                new ECar("Blue", 8.0),
+                new EMotorcycle("White", 3.0)
         };
 
 
@@ -53,7 +53,7 @@ public class VehicleDemo {
                     ((AbstractVehicle) vehicle).getType(),
                     ((AbstractVehicle) vehicle).isRunning());
             // accelerate
-            ((AbstractVehicle) vehicle).accelerate(50);
+            ((AbstractVehicle) vehicle).accelerate();
             System.out.printf("After acceleration - Speed: %.1f km/h (Max: %.1f km/h)%n",
                     ((AbstractVehicle) vehicle).getSpeed(),
                     ((AbstractVehicle) vehicle).getMaxSpeed());
@@ -71,10 +71,13 @@ public class VehicleDemo {
             //System.out.println("\n" + ((AbstractVehicle) vehicle).getGasolineLevel());
 
             // Display fuel efficiency
+            System.out.printf("Distance traveled: %.1f km%n",
+                    ((AbstractVehicle) vehicle).getTotalDistance());
+            System.out.printf("Operating time: %.1f hours%n",
+                    ((AbstractVehicle) vehicle).getTotalFuelConsumed());
             System.out.printf("\nFuel Efficiency: %.1f %s%n",
-            vehicle.calculateFuelEfficiency(),
+                            vehicle.calculateFuelEfficiency(),
             vehicle instanceof ECar || vehicle instanceof EMotorcycle ? "kWh/100km" : "L/100km");
-
         }
     }
 }

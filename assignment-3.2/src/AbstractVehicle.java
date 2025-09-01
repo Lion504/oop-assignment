@@ -2,9 +2,11 @@ public abstract class AbstractVehicle implements Vehicle {
     protected String type;
     protected String engineType;
     protected String color;
-    protected double fuelEfficiency; // mpg or kWh per km
+    protected double fuelEfficiency;
     protected boolean running;
-
+    protected double totalDistance = 0;
+    protected double totalFuelConsumed = 0;
+    protected double operatingTime = 0;
     // Common vehicle variables
     protected double speed;
     protected double gasolineLevel;
@@ -43,7 +45,10 @@ public abstract class AbstractVehicle implements Vehicle {
 
     @Override
     public double calculateFuelEfficiency() {
-        return fuelEfficiency;
+        if (totalFuelConsumed == 0) {
+            return fuelEfficiency; // Return stored value
+        }
+        return (totalFuelConsumed / totalDistance )*100;
     }
 
 
@@ -58,10 +63,45 @@ public abstract class AbstractVehicle implements Vehicle {
             running = false;
         }
     }
-    public void accelerate(int accelerateRate) {
-        if (gasolineLevel > 0 && accelerateRate > 0 && running) {
-            speed = Math.min(speed + accelerateRate, maxSpeed);
-            useGasoline(accelerateRate * 0.1); //will use gas
+
+    public void accelerate() {
+        if (gasolineLevel > 0 && running) {
+            int acceleration;
+            double consumptionRate;
+
+            switch(type.toLowerCase()) {
+                case "car":
+                    acceleration = 40;
+                    consumptionRate = 0.05;    // 5% fuel consumption
+                    break;
+                case "motorcycle":
+                    acceleration = 80;
+                    consumptionRate = 0.01;
+                    break;
+                case "bus":
+                    acceleration = 25;
+                    consumptionRate = 0.09;
+                default:
+                    acceleration = 10;
+                    consumptionRate = 0.1;
+            }
+
+            double previousSpeed = speed;
+            speed = Math.min(speed + acceleration, maxSpeed);
+
+            double timeIncrement = 1.0; // assume 1 hour
+            operatingTime += timeIncrement;
+
+            // Calculate distance traveled
+            double avgSpeed = (previousSpeed + speed) / 2.0;
+            double distance = avgSpeed * timeIncrement;
+            totalDistance += distance;
+
+            // Calculate consumption
+            double fuelUsed = acceleration * timeIncrement * consumptionRate;
+            useGasoline(fuelUsed);
+            totalFuelConsumed = fuelUsed;
+
         } else if (gasolineLevel <= 0) {
             System.out.println(type + " cannot accelerate - no fuel!");
         } else {
@@ -89,6 +129,10 @@ public abstract class AbstractVehicle implements Vehicle {
     public String getEngineType() { return engineType; }
     public String getColor() { return color; }
     public boolean isRunning() { return running; }
+    public double getTotalDistance() { return totalDistance; }
+    public double getTotalFuelConsumed() { return totalFuelConsumed; }
+    public double getOperatingTime() { return operatingTime; }
+
 
 }
 
