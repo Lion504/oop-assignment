@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/assignment-3.3/3.3Task1/3.3Task1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-3.3/3.3Task1/src/BankAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-3.3/assignment-3.3.iml" afterDir="false" />
+    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="initial + complete task1">
+      <change afterPath="$PROJECT_DIR$/assignment-3.3/3.3Task2/3.3Task2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-3.3/3.3Task2/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-3.3/3.3Task2/src/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-3.3/3.3Task2/src/model/LibraryMember.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-3.3/3.3Task2/src/system/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,7 @@
       <workItem from="1756735795527" duration="18103000" />
       <workItem from="1756755694841" duration="1250000" />
       <workItem from="1756798604322" duration="9000" />
-      <workItem from="1756810438625" duration="3095000" />
+      <workItem from="1756810438625" duration="10245000" />
     </task>
     <task id="LOCAL-00001" summary="package structure update">
       <option name="closed" value="true" />
@@ -410,7 +411,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756754903118</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="initial + complete task1">
+      <option name="closed" value="true" />
+      <created>1756814680714</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1756814680714</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +442,8 @@
     <MESSAGE value="initial" />
     <MESSAGE value="update car" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="initial + complete task1" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial + complete task1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
