@@ -1,35 +1,17 @@
-import java.util.Arrays;
-import java.util.Scanner;
 public class test {
-    public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        System.out.print("How many numbers of integer you wish in array: ");
-        int size = input.nextInt();
-        int[] intList = new int[size];
-        int counter = 1;
+    private static int count = 0; // This is shared by ALL Counter objects
 
-        for (int i = 0; i < size; i++) {
-            System.out.print("Enter integer:" + counter);
-            int num = input.nextInt();
-            intList[i] = num;
-            counter += 1;
+    public test() {
+        count++; // Every time we create a new Counter, this shared number goes up
+    }
 
-        }
-
-        System.out.print("Number list: ");
-        for (int num : intList) {
-            System.out.print(num + " ");
-        }
-
-        int[] plusResults = new int[size*size];
-        int index = 0;
-        for (int x = 0; x < size; x++) {
-            for (int y = 0; y < size; y++) {
-                int plusResult = intList[x] + intList[y];
-                plusResults[index++] = plusResult;
-            }
-        }
-        int max = Arrays.stream(plusResults).max().getAsInt();
-        System.out.println("\nThe Max number is: " + max);
+    public static int getCount() {
+        System.out.println(count);
+        return count;
+    }
+    public static void main(String[] args) {
+        test test1 = new test();
+        test test = new test();
+        test.getCount();
     }
 }
