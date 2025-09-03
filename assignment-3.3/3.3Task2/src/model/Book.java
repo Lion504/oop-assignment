@@ -6,6 +6,7 @@ public class Book {
     private int publishedYear;
     private double price;
     private boolean available = true;
+    private boolean notReserved = true;
 
     public Book(String title, String author, int publishedYear, double price) {
         this.title = title;
@@ -34,8 +35,16 @@ public class Book {
         return this.available;
     }
 
+    public boolean isNotReserved() {
+        return this.notReserved;
+    }
+
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+
+    public void setNotReserved(boolean notReserved) {
+        this.notReserved = notReserved;
     }
 
     @Override

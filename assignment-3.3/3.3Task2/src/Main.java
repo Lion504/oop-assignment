@@ -25,7 +25,6 @@ public class Main {
         LibraryMember member2 = new LibraryMember("Bob", 1002);
 
         // Add to library
-
         library.addLibraryMember(member1);
         library.addLibraryMember(member2);
 
@@ -33,6 +32,9 @@ public class Main {
         library.borrowBook(member1, book1);
         library.borrowBook(member2, book2);
         library.returnBook(member1, book1);
+        library.reserveBook(member1, book1);
+        library.displayReservedBooks();
+        library.cancelReservation(member1, book1);
 
     }
 }
