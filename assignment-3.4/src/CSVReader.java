@@ -19,8 +19,10 @@ public class CSVReader {
                 //System.out.println(line);
                 String[] parts = line.split(";");
                 String data = parts[0];
+                //now it's 01.01.2023
                 if (data.startsWith("01.01.2023")) {
                     //System.out.println(parts[0] + " " + parts[idx]);
+                    //now it's commas
                     sum += Double.parseDouble(parts[idx].replace(",", "."));
                     cnt++;
                 }
