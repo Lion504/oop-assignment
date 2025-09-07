@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="complete 1">
+    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/assignment-3.4/src/FibonacciCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment-3.4/src/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.4/src/CSVReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,40 +48,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BankAccount.executor": "Run",
-    "Application.CSVReader.executor": "Run",
-    "Application.CoffeeMakerDriver.executor": "Run",
-    "Application.GroceryListManager.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.ShapeTestProgram.executor": "Run",
-    "Application.Test.executor": "Run",
-    "Application.Tester.executor": "Run",
-    "Application.VehicleDemo.executor": "Run",
-    "Application.test.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lehto/IdeaProjects/oop-assignment/assignment-3.2/test/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.tabbyml.intellijtabby.settings.Configurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BankAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CSVReader.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CoffeeMakerDriver.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FibonacciCSV.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GroceryListManager.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ShapeTestProgram.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Tester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.VehicleDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lehto/IdeaProjects/oop-assignment/assignment-3.2/test/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.tabbyml.intellijtabby.settings.Configurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lehto\IdeaProjects\oop-assignment\assignment-3.2\test\src" />
@@ -148,7 +149,15 @@
       <workItem from="1757148053801" duration="68000" />
       <workItem from="1757148488723" duration="266000" />
       <workItem from="1757149976795" duration="2208000" />
-      <workItem from="1757166001924" duration="3868000" />
+      <workItem from="1757166001924" duration="4217000" />
+      <workItem from="1757190201452" duration="1024000" />
+      <workItem from="1757191834194" duration="206000" />
+      <workItem from="1757192059673" duration="1175000" />
+      <workItem from="1757193256320" duration="363000" />
+      <workItem from="1757193642597" duration="344000" />
+      <workItem from="1757193998836" duration="37000" />
+      <workItem from="1757200351449" duration="2878000" />
+      <workItem from="1757235855434" duration="971000" />
     </task>
     <task id="LOCAL-00001" summary="package structure update">
       <option name="closed" value="true" />
@@ -494,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757167781140</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="update">
+      <option name="closed" value="true" />
+      <created>1757169910337</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1757169910337</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,9 +535,9 @@
     <MESSAGE value="update car" />
     <MESSAGE value="initial + complete task1" />
     <MESSAGE value="complete task2" />
-    <MESSAGE value="update" />
     <MESSAGE value="complete 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete 1" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
