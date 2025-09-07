@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/assignment-3.5/assignment-3.5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-3.5/src/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-3.5/src/Testmain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/Enrollment.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/Enrollment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enrollment.ser" beforeDir="false" afterPath="$PROJECT_DIR$/enrollment.ser" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +62,7 @@
     "Application.ShapeTestProgram.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.Tester.executor": "Run",
+    "Application.Testmain.executor": "Run",
     "Application.VehicleDemo.executor": "Run",
     "Application.main.executor": "Run",
     "Application.test.executor": "Run",
@@ -82,7 +84,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -162,15 +164,9 @@
       <workItem from="1757200351449" duration="2878000" />
       <workItem from="1757235855434" duration="971000" />
       <workItem from="1757236843565" duration="541000" />
-      <workItem from="1757242071420" duration="8798000" />
-    </task>
-    <task id="LOCAL-00003" summary="update">
-      <option name="closed" value="true" />
-      <created>1756540882478</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1756540882478</updated>
+      <workItem from="1757242071420" duration="9661000" />
+      <workItem from="1757274564992" duration="162000" />
+      <workItem from="1757274748843" duration="2424000" />
     </task>
     <task id="LOCAL-00004" summary="update">
       <option name="closed" value="true" />
@@ -556,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757267407718</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="update">
+      <option name="closed" value="true" />
+      <created>1757269312631</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1757269312631</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
