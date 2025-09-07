@@ -12,10 +12,9 @@ public class Enrollment implements Serializable {
 
     @Override
     public String toString() {
-        return "Enrollment{" +
-                "student=" + student +
-                ", course=" + course +
-                '}';
+        return "Enrollment List:" +
+                "\n" + student +
+                "\n" + course;
     }
 
 }

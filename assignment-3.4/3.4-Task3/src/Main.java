@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         // initial objects
         Student student1 = new Student(1, "Jimi", 20);
-        Course course1 = new Course(102, "Java Programming");
+        Course course1 = new Course(102, "Java Programming", "Jarkko");
         Enrollment enrollment1 = new Enrollment(student1, course1);
 
         //serialize the enrollment objects
