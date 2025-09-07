@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/3.4-Task3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/Enrollment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.4/3.4-Task3/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +81,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.tabbyml.intellijtabby.settings.Configurable",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -165,7 +161,7 @@
       <workItem from="1757200351449" duration="2878000" />
       <workItem from="1757235855434" duration="971000" />
       <workItem from="1757236843565" duration="541000" />
-      <workItem from="1757242071420" duration="3735000" />
+      <workItem from="1757242071420" duration="6814000" />
     </task>
     <task id="LOCAL-00001" summary="package structure update">
       <option name="closed" value="true" />
@@ -543,7 +539,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757242083276</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="complete task3">
+      <option name="closed" value="true" />
+      <created>1757256850199</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1757256850199</updated>
+    </task>
+    <task id="LOCAL-00049" summary="update">
+      <option name="closed" value="true" />
+      <created>1757256864887</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1757256864887</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,6 +580,7 @@
     <MESSAGE value="initial + complete task1" />
     <MESSAGE value="complete 1" />
     <MESSAGE value="complete task2" />
+    <MESSAGE value="complete task3" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
