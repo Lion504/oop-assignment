@@ -2,7 +2,7 @@
 
 A simple Java Calculator class implementing the Model part of an MVC pattern. It performs basic arithmetic on positive integers and stores the result of the last operation.
 
-## :bangbang:Key Features
+## :monkey:Key Features
 
 - Accepts only positive integers; negative inputs throw `IllegalArgumentException`.
 - Supports addition, subtraction, multiplication, and division.
@@ -106,13 +106,12 @@ calc.reset();                      // currentValue == 0
 
 ```
 
-### Errors and validation
+### :interrobang:Errors and validation
 
-Passing a negative a or b throws IllegalArgumentException with message Cannot use negative integers.
+* Passing negative a or b throws IllegalArgumentException with error message.
+* Dividing by zero throws IllegalArgumentException with error message.
 
-Dividing by zero throws IllegalArgumentException with message Cannot divide by zero.
-
-### Project files
+### :card\_file\_box:Project files
 
 * Calculator.java — the Calculator implementation.
 * Testmain.java - for Testing.
@@ -120,5 +119,5 @@ Dividing by zero throws IllegalArgumentException with message Cannot divide by z
 
 ## :point\_right:Notes
 
-* Division uses integer division; if fractional results are required, convert inputs to double or change the API to return double.
+* Division uses integer division; if decimal results are required, convert inputs to double or change the API to return double.
 * The Calculator contains no I/O or UI code and is suitable for unit testing and integration into MVC controllers or views.
