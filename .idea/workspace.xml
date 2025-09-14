@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-1.1/assignment-1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-3.3/3.3Task2/src/system/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-3.3/3.3Task2/src/system/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment-4/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-4/src/Calculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +21,7 @@
       <list>
         <option value="TypeScript File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,43 +52,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BankAccount.executor": "Run",
-    "Application.CSVReader.executor": "Run",
-    "Application.CoffeeMakerDriver.executor": "Run",
-    "Application.FibonacciCSV.executor": "Run",
-    "Application.GroceryListManager.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.ShapeTestProgram.executor": "Run",
-    "Application.Test.executor": "Run",
-    "Application.Tester.executor": "Run",
-    "Application.Testmain.executor": "Run",
-    "Application.VehicleDemo.executor": "Run",
-    "Application.main.executor": "Run",
-    "Application.test.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lehto/IdeaProjects/oop-assignment/assignment-3.2/test/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.github.copilot.settings.completions.CompletionsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BankAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CSVReader.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CoffeeMakerDriver.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FibonacciCSV.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GroceryListManager.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ShapeTestProgram.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Tester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Testmain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.VehicleDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lehto/IdeaProjects/oop-assignment/assignment-3.2/test/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.mcp.McpConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lehto\IdeaProjects\oop-assignment\assignment-3.2\test\src" />
@@ -169,15 +173,14 @@
       <workItem from="1757285284397" duration="24000" />
       <workItem from="1757285315060" duration="244000" />
       <workItem from="1757313240271" duration="23000" />
-      <workItem from="1757313271795" duration="1689000" />
-    </task>
-    <task id="LOCAL-00009" summary="complete">
-      <option name="closed" value="true" />
-      <created>1756564494650</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1756564494650</updated>
+      <workItem from="1757313271795" duration="5474000" />
+      <workItem from="1757359993117" duration="237000" />
+      <workItem from="1757360248186" duration="33000" />
+      <workItem from="1757422549701" duration="535000" />
+      <workItem from="1757522520060" duration="26000" />
+      <workItem from="1757759739489" duration="515000" />
+      <workItem from="1757763836773" duration="2000" />
+      <workItem from="1757853196924" duration="408000" />
     </task>
     <task id="LOCAL-00010" summary="complete">
       <option name="closed" value="true" />
@@ -563,7 +566,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757279154485</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="update">
+      <option name="closed" value="true" />
+      <created>1757315247544</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1757315247544</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
