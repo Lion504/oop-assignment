@@ -126,7 +126,7 @@ public class Task1 {
             // Demonstrate reset functionality
             System.out.println("\n--- Resetting and printing again ---\n");
             printer.reset();
-            printer.startPrinting(10);
+            printer.startPrinting(50);
 
         } catch (InterruptedException e) {
             System.err.println("Main thread was interrupted: " + e.getMessage());
