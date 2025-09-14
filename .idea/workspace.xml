@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignemnt-5.1/src/main/java/Task2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignemnt-5.1/src/main/java/TaskRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1$EvenThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1$EvenThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1$OddThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1$OddThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1.class" afterDir="false" />
-    </list>
+    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="complete task2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,14 +218,6 @@
       <workItem from="1757759739489" duration="515000" />
       <workItem from="1757763836773" duration="2000" />
       <workItem from="1757853196924" duration="6307000" />
-    </task>
-    <task id="LOCAL-00013" summary="update">
-      <option name="closed" value="true" />
-      <created>1756645865170</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1756645865170</updated>
     </task>
     <task id="LOCAL-00014" summary="update">
       <option name="closed" value="true" />
@@ -621,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757861053609</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="complete task2">
+      <option name="closed" value="true" />
+      <created>1757864132695</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1757864132695</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -644,13 +634,13 @@
     <MESSAGE value="update car" />
     <MESSAGE value="initial + complete task1" />
     <MESSAGE value="complete 1" />
-    <MESSAGE value="complete task2" />
     <MESSAGE value="complete task3" />
     <MESSAGE value="Task1 complete" />
     <MESSAGE value="Task2 complete" />
     <MESSAGE value="complete" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="complete task2" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete task2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
