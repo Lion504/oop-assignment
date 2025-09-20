@@ -1,0 +1,11 @@
+Dictionary.class
+DictionaryApp.class
+DictionaryController$AsyncSearchCallback.class
+DictionaryController$SearchResult.class
+DictionaryView.class
+DictionaryController$1.class
+WordNotFoundException.class
+Dictionary$DictionaryStats.class
+DictionaryController.class
+Dictionary$SearchCallback.class
+WiktionaryService.class

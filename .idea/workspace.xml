@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-5.2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-5.2/src/main/java/Task1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-5.2/src/main/java/Task2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-5.2/src/test/java/Task2Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.1/src/main/java/Dictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.1/src/main/java/DictionaryApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.1/src/main/java/DictionaryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.1/src/main/java/DictionaryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.1/src/main/java/WiktionaryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/src/main/java/Task1.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/src/main/java/Task1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task2.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/TaskRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/TaskRunner.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,11 +92,11 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/lehto/IdeaProjects/oop-assignment/assignment-5.2/src/main/java/org/example/Main.java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/lehto/IdeaProjects/oop-assignment/assignment-6.1/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.mcp.McpConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.network.NetworkConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -120,7 +116,7 @@
       <recent name="Task2" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Calculator">
     <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Calculator" />
       <module name="assignment-4" />
@@ -246,23 +242,8 @@
       <workItem from="1758364929783" duration="4285000" />
       <workItem from="1758369372375" duration="945000" />
       <workItem from="1758370395372" duration="1594000" />
-      <workItem from="1758372004220" duration="3558000" />
-    </task>
-    <task id="LOCAL-00016" summary="update">
-      <option name="closed" value="true" />
-      <created>1756651975022</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1756651975022</updated>
-    </task>
-    <task id="LOCAL-00017" summary="complete">
-      <option name="closed" value="true" />
-      <created>1756653225199</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1756653225199</updated>
+      <workItem from="1758372004220" duration="10608000" />
+      <workItem from="1758383824783" duration="713000" />
     </task>
     <task id="LOCAL-00018" summary="complete">
       <option name="closed" value="true" />
@@ -640,7 +621,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757864635364</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="finish assignment 5.2">
+      <option name="closed" value="true" />
+      <created>1758375597921</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1758375597923</updated>
+    </task>
+    <task id="LOCAL-00066" summary="update">
+      <option name="closed" value="true" />
+      <created>1758375611198</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1758375611198</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -668,6 +665,7 @@
     <MESSAGE value="Task2 complete" />
     <MESSAGE value="complete" />
     <MESSAGE value="complete task2" />
+    <MESSAGE value="finish assignment 5.2" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
@@ -693,6 +691,11 @@
           <url>file://$PROJECT_DIR$/assignment-5.2/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/assignment-6.1/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
