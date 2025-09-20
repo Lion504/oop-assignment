@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-5.2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-5.2/src/main/java/Task1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-5.2/src/main/java/Task2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-5.2/src/test/java/Task2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/src/main/java/Task1.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/src/main/java/Task1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task2.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/TaskRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/TaskRunner.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,48 +61,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BankAccount.executor": "Run",
-    "Application.CSVReader.executor": "Run",
-    "Application.Calculator.executor": "Run",
-    "Application.CoffeeMakerDriver.executor": "Run",
-    "Application.FibonacciCSV.executor": "Run",
-    "Application.GroceryListManager.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.ShapeTestProgram.executor": "Run",
-    "Application.Task1.executor": "Run",
-    "Application.Task2.executor": "Run",
-    "Application.TaskRunner.executor": "Run",
-    "Application.Test.executor": "Run",
-    "Application.Tester.executor": "Run",
-    "Application.Testmain.executor": "Run",
-    "Application.VehicleDemo.executor": "Run",
-    "Application.main.executor": "Run",
-    "Application.test.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lehto/IdeaProjects/oop-assignment/assignment-3.2/test/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/lehto/IdeaProjects/oop-assignment/assignemnt-5.1/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.github.copilot.settings.mcp.McpConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BankAccount.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CSVReader.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Calculator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CoffeeMakerDriver.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FibonacciCSV.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GroceryListManager.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ShapeTestProgram.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Task2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TaskRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Tester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Testmain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.VehicleDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test1.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lehto/IdeaProjects/oop-assignment/assignment-3.2/test/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/lehto/IdeaProjects/oop-assignment/assignment-5.2/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.mcp.McpConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lehto\IdeaProjects\oop-assignment\assignment-3.2\test\src" />
@@ -97,13 +111,16 @@
       <recent name="C:\Users\lehto\IdeaProjects\oop-assignment\assignment-2.2\src\Task4" />
       <recent name="C:\Users\lehto\IdeaProjects\oop-assignment\assignment-2.2\Task1" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lehto\IdeaProjects\oop-assignment\assignment-5.2\src\test" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="Task3" />
       <recent name="Task2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TaskRunner">
+  <component name="RunManager">
     <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Calculator" />
       <module name="assignment-4" />
@@ -134,18 +151,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Calculator" />
         <item itemvalue="Application.TaskRunner" />
         <item itemvalue="Application.Task1" />
         <item itemvalue="Application.Task2" />
-        <item itemvalue="Application.Calculator" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
-        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
+        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-IU-252.26199.169" />
       </set>
     </attachedChunks>
   </component>
@@ -220,14 +237,16 @@
       <workItem from="1757759739489" duration="515000" />
       <workItem from="1757763836773" duration="2000" />
       <workItem from="1757853196924" duration="6307000" />
-    </task>
-    <task id="LOCAL-00015" summary="update">
-      <option name="closed" value="true" />
-      <created>1756650659567</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1756650659567</updated>
+      <workItem from="1757869177595" duration="22000" />
+      <workItem from="1757871337334" duration="26000" />
+      <workItem from="1757965961867" duration="1863000" />
+      <workItem from="1758280132318" duration="437000" />
+      <workItem from="1758280728388" duration="10113000" />
+      <workItem from="1758364433478" duration="477000" />
+      <workItem from="1758364929783" duration="4285000" />
+      <workItem from="1758369372375" duration="945000" />
+      <workItem from="1758370395372" duration="1594000" />
+      <workItem from="1758372004220" duration="3558000" />
     </task>
     <task id="LOCAL-00016" summary="update">
       <option name="closed" value="true" />
@@ -613,7 +632,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757864513429</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="update">
+      <option name="closed" value="true" />
+      <created>1757864635364</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1757864635364</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -661,6 +688,11 @@
           <url>file://$PROJECT_DIR$/assignment-3.3/3.3Task2/src/system/Library.java</url>
           <line>56</line>
           <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/assignment-5.2/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

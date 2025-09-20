@@ -32,7 +32,7 @@ public class Task1 {
                     while ((currentNum % 2 == 0 || currentNum > max) && !isPrintingComplete) {
                         if (currentNum > max) {
                             isPrintingComplete = true;
-                            evenTurn.signalAll(); // Wake up even thread to exit
+                            evenTurn.signalAll();// Wake up even thread to exit
                             break;
                         }
                         oddTurn.await();
