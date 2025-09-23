@@ -4,17 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/assignment-6.1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-6.1/src/main/java/Dictionary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-6.1/src/main/java/DictionaryApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-6.1/src/main/java/DictionaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-6.1/src/main/java/DictionaryView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment-6.1/src/main/java/WiktionaryService.java" afterDir="false" />
+    <list default="true" id="3edb56a7-45ed-464b-9c12-832a0e059b4d" name="Changes" comment="finish assignment 6.1">
+      <change afterPath="$PROJECT_DIR$/assignment-6.2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.2/src/main/java/CurrencyConverterApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.2/src/main/java/controller/CurrencyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.2/src/main/java/model/Currency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.2/src/main/java/model/CurrencyConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment-6.2/src/main/java/view/CurrencyView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1$EvenThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1$EvenThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1$OddThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1$OddThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task2.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignemnt-5.1/target/classes/Task2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-5.2/target/classes/Task1.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-5.2/target/classes/Task1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-5.2/target/classes/Task2$TestResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-5.2/target/classes/Task2.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-5.2/target/classes/Task2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-5.2/target/classes/ThreadSafeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-5.2/target/classes/ThreadSafeList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-5.2/target/test-classes/Task2Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/Dictionary$DictionaryStats.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/Dictionary$DictionaryStats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/Dictionary$SearchCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/Dictionary$SearchCallback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/Dictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/Dictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryController$AsyncSearchCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryController$AsyncSearchCallback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryController$SearchResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryController$SearchResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryView.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/DictionaryView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/WiktionaryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/WiktionaryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment-6.1/target/classes/WordNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/assignment-6.1/target/classes/WordNotFoundException.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,49 +77,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BankAccount.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CSVReader.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Calculator.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CoffeeMakerDriver.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FibonacciCSV.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GroceryListManager.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ShapeTestProgram.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Task1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Task2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TaskRunner.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Tester.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Testmain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.VehicleDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.test1.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lehto/IdeaProjects/oop-assignment/assignment-3.2/test/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/lehto/IdeaProjects/oop-assignment/assignment-6.1/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.network.NetworkConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BankAccount.executor": "Run",
+    "Application.CSVReader.executor": "Run",
+    "Application.Calculator.executor": "Run",
+    "Application.CoffeeMakerDriver.executor": "Run",
+    "Application.CurrencyConverterApp.executor": "Run",
+    "Application.FibonacciCSV.executor": "Run",
+    "Application.GroceryListManager.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.ShapeTestProgram.executor": "Run",
+    "Application.Task1.executor": "Run",
+    "Application.Task2.executor": "Run",
+    "Application.TaskRunner.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.Tester.executor": "Run",
+    "Application.Testmain.executor": "Run",
+    "Application.VehicleDemo.executor": "Run",
+    "Application.main.executor": "Run",
+    "Application.test.executor": "Run",
+    "Application.test1.executor": "Run",
+    "Batch.run.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lehto/IdeaProjects/oop-assignment/assignment-3.2/test/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/lehto/IdeaProjects/oop-assignment/assignment-6.2/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.network.NetworkConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lehto\IdeaProjects\oop-assignment\assignment-3.2\test\src" />
@@ -115,44 +137,6 @@
       <recent name="Task3" />
       <recent name="Task2" />
     </key>
-  </component>
-  <component name="RunManager" selected="Application.Calculator">
-    <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Calculator" />
-      <module name="assignment-4" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Task1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Task1" />
-      <module name="assignemnt-5.1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Task2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Task2" />
-      <module name="assignemnt-5.1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TaskRunner" />
-      <module name="assignemnt-5.1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Calculator" />
-        <item itemvalue="Application.TaskRunner" />
-        <item itemvalue="Application.Task1" />
-        <item itemvalue="Application.Task2" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -243,15 +227,8 @@
       <workItem from="1758369372375" duration="945000" />
       <workItem from="1758370395372" duration="1594000" />
       <workItem from="1758372004220" duration="10608000" />
-      <workItem from="1758383824783" duration="713000" />
-    </task>
-    <task id="LOCAL-00018" summary="complete">
-      <option name="closed" value="true" />
-      <created>1756656260237</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1756656260237</updated>
+      <workItem from="1758383824783" duration="1062000" />
+      <workItem from="1758609560818" duration="8660000" />
     </task>
     <task id="LOCAL-00019" summary="initial">
       <option name="closed" value="true" />
@@ -637,7 +614,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758375611198</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="finish assignment 6.1">
+      <option name="closed" value="true" />
+      <created>1758384623341</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1758384623341</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,7 +652,8 @@
     <MESSAGE value="complete task2" />
     <MESSAGE value="finish assignment 5.2" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="finish assignment 6.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish assignment 6.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -696,6 +682,11 @@
           <url>file://$PROJECT_DIR$/assignment-6.1/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/assignment-6.2/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
