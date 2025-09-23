@@ -22,6 +22,10 @@ bin/
 /nbdist/
 /.nb-gradle/
 
+**/target/
+**/out/
+.idea/
+
 ### VS Code ###
 .vscode/
 
