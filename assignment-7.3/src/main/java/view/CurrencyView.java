@@ -25,6 +25,7 @@ public class CurrencyView {
     private Button convertButton;              // Button convert the money
     private Button addCurrencyButton;          // Button to add new currency
     private Label resultLabel;                 // Shows the result after conversion
+    private Label exchangeRateLabel;           // Shows exchange rates between selected currencies
     private VBox mainLayout;                   // The main container that holds everything
     private Stage parentStage;                 // Reference to parent stage for dialogs
 
@@ -108,6 +109,10 @@ public class CurrencyView {
         resultLabel = new Label("Enter an amount and select currencies to convert");
         resultLabel.getStyleClass().addAll("result-label", "empty");
 
+        // 9. Exchange rate display
+        exchangeRateLabel = new Label("Exchange rate will be shown here");
+        exchangeRateLabel.getStyleClass().add("exchange-rate-label");
+
         // Add everything to the grid in the right positions
         grid.add(titleLabel, 0, 0, 2, 1);  // Span across 2 columns
         grid.add(amountLabel, 0, 1);
@@ -118,6 +123,7 @@ public class CurrencyView {
         grid.add(toCurrency, 1, 3);
         grid.add(buttonBox, 0, 4, 2, 1);   // Span across 2 columns
         grid.add(resultLabel, 0, 5, 2, 1); // Span across 2 columns
+        grid.add(exchangeRateLabel, 0, 6, 2, 1); // Span across 2 columns
 
         // Add the grid to our main container
         mainLayout.getChildren().add(grid);
@@ -244,7 +250,49 @@ public class CurrencyView {
         return resultLabel;
     }
 
+    public Label getExchangeRateLabel() {
+        return exchangeRateLabel;
+    }
+
     public Stage getParentStage() {
         return parentStage;
+    }
+
+    /**
+     * Update the exchange rate display based on selected currencies
+     * Shows rates like "1 USD = 0.8546 EUR" and "1 EUR = 1.1702 USD"
+     */
+    public void updateExchangeRateDisplay(Currency fromCur, Currency toCur) {
+        if (fromCur == null || toCur == null) {
+            exchangeRateLabel.setText("Select currencies to see exchange rates");
+            exchangeRateLabel.getStyleClass().removeAll("rate-info");
+            exchangeRateLabel.getStyleClass().add("rate-empty");
+            return;
+        }
+
+        if (fromCur.equals(toCur)) {
+            exchangeRateLabel.setText("Same currency selected");
+            exchangeRateLabel.getStyleClass().removeAll("rate-info");
+            exchangeRateLabel.getStyleClass().add("rate-empty");
+            return;
+        }
+
+        // Calculate exchange rates (both directions)
+        double fromRate = fromCur.getRate();
+        double toRate = toCur.getRate();
+
+        // Rate from "from" currency to "to" currency
+        double forwardRate = toRate / fromRate;
+        // Rate from "to" currency back to "from" currency
+        double reverseRate = fromRate / toRate;
+
+        // Format the display text
+        String rateText = String.format("1 %s = %.4f %s\n1 %s = %.4f %s",
+            fromCur.getCode(), forwardRate, toCur.getCode(),
+            toCur.getCode(), reverseRate, fromCur.getCode());
+
+        exchangeRateLabel.setText(rateText);
+        exchangeRateLabel.getStyleClass().removeAll("rate-empty");
+        exchangeRateLabel.getStyleClass().add("rate-info");
     }
 }

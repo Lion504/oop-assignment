@@ -129,6 +129,24 @@ public class CurrencyController {
         // When the Add Currency button is clicked, show the add currency dialog
         view.getAddCurrencyButton().setOnAction(event ->
             showAddCurrencyDialog(view.getParentStage()));
+
+        // When "From Currency" selection changes, update exchange rate display
+        view.getFromCurrency().setOnAction(event -> updateExchangeRateDisplay());
+
+        // When "To Currency" selection changes, update exchange rate display
+        view.getToCurrency().setOnAction(event -> updateExchangeRateDisplay());
+
+        // Update exchange rate display for initial selection
+        updateExchangeRateDisplay();
+    }
+
+    /**
+     * Update the exchange rate display based on currently selected currencies
+     */
+    private void updateExchangeRateDisplay() {
+        Currency fromCurrency = view.getFromCurrency().getValue();
+        Currency toCurrency = view.getToCurrency().getValue();
+        view.updateExchangeRateDisplay(fromCurrency, toCurrency);
     }
 
     /**

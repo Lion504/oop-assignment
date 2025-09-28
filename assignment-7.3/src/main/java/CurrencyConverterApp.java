@@ -46,7 +46,7 @@ public class CurrencyConverterApp extends Application {
             CurrencyController controller = new CurrencyController(view);
 
             // Create a scene with our view inside
-            Scene scene = new Scene(view.getMainLayout(), 500, 450);
+            Scene scene = new Scene(view.getMainLayout(), 500, 550);
 
             // Load the modern CSS stylesheet
             String cssFile = getClass().getResource("/styles.css").toExternalForm();
