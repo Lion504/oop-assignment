@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--
+This FXML file defines the layout of our user interface
+FXML is like HTML for JavaFX - it describes what our window should look like
+The fx:controller tells JavaFX which Java class will handle the button clicks and other events
+-->
+
+<?xml-stylesheet type="text/css" href="apple_style.css"?>
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NoteController" stylesheets="apple_style.css">
+
+   <!-- TOP SECTION - Input fields and buttons -->
+   <top>
+      <VBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+
+         <!-- Title input section -->
+         <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <Label text="Title:" />
+            <!-- fx:id connects this field to our Java controller -->
+            <TextField fx:id="titleField" prefWidth="300.0" promptText="Enter note title here..." />
+         </HBox>
+
+         <!-- Buttons section -->
+         <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <!-- onAction tells JavaFX which method to call when button is clicked -->
+            <Button fx:id="addButton" onAction="#handleAddNote" text="Add Note" />
+            <Button fx:id="editButton" onAction="#handleEditNote" text="Update Note" />
+            <Button fx:id="deleteButton" onAction="#handleDeleteNote" text="Delete Note" />
+            <Button fx:id="clearButton" onAction="#handleClearAll" text="Clear All" />
+         </HBox>
+      </VBox>
+   </top>
+
+   <!-- CENTER SECTION - Main content area -->
+   <center>
+      <VBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+
+         <!-- Content input area -->
+         <Label text="Content:" />
+         <TextArea fx:id="contentArea" prefHeight="400.0" promptText="Write your note content here..." wrapText="true" />
+      </VBox>
+   </center>
+
+   <!-- RIGHT SECTION - List of saved notes -->
+   <right>
+      <VBox spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+
+         <Label text="Saved Notes:" />
+         <!-- ListView shows all our saved notes -->
+         <ListView fx:id="notesListView" prefHeight="400.0" prefWidth="250.0" />
+
+         <!-- Status label to show messages to user -->
+         <Label fx:id="statusLabel" text="Ready to create notes!" />
+      </VBox>
+   </right>
+
+</BorderPane>

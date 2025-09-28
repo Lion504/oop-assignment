@@ -1,0 +1,194 @@
+/* Apple-inspired JavaFX UI styling - Enhanced for macOS look */
+
+.root {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "SF Pro Display", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-font-smoothing-type: lcd;
+}
+
+/* Primary action button (Add Note) */
+.button {
+    -fx-background-radius: 8;
+    -fx-background-color: #007AFF;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.3, 0, 1);
+    -fx-border-radius: 8;
+    -fx-border-width: 0;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #0056CC;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0.4, 0, 2);
+}
+
+.button:pressed {
+    -fx-background-color: #004BB8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0.2, 0, 1);
+}
+
+/* Secondary buttons */
+#editButton, #deleteButton, #clearButton {
+    -fx-background-color: #F2F2F7;
+    -fx-text-fill: #007AFF;
+    -fx-border-color: #E5E5EA;
+    -fx-border-width: 0.5;
+}
+
+#editButton:hover, #clearButton:hover {
+    -fx-background-color: #E8E8ED;
+    -fx-text-fill: #0056CC;
+}
+
+#deleteButton {
+    -fx-text-fill: #FF3B30;
+}
+
+#deleteButton:hover {
+    -fx-background-color: #FFE8E6;
+    -fx-text-fill: #D70015;
+}
+
+/* Text inputs with modern macOS styling */
+.text-field, .text-area {
+    -fx-background-radius: 8;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 8;
+    -fx-border-color: #D1D1D6;
+    -fx-border-width: 1;
+    -fx-padding: 12;
+    -fx-font-size: 13px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 2, 0.2, 0, 1);
+    -fx-prompt-text-fill: #8E8E93;
+}
+
+/* Enhanced TextArea for content writing */
+.text-area {
+    -fx-font-family: "SF Pro Text", "Segoe UI", "Helvetica Neue", sans-serif;
+    -fx-line-spacing: 1.4;
+    -fx-text-fill: #1D1D1F;
+    -fx-font-size: 14px;
+    -fx-padding: 16;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #007AFF;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,122,255,0.3), 4, 0.3, 0, 1);
+}
+
+/* ListView with modern appearance */
+.list-view {
+    -fx-background-radius: 8;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 8;
+    -fx-border-color: #D1D1D6;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0.3, 0, 2);
+    -fx-padding: 4;
+}
+
+.list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 0.5 0;
+    -fx-border-color: #F2F2F7;
+    -fx-padding: 12 16;
+    -fx-font-size: 13px;
+    -fx-background-radius: 6;
+    -fx-text-fill: #1D1D1F;
+    -fx-font-family: "SF Pro Text", "Segoe UI", sans-serif;
+}
+
+.list-view .list-cell:last-child {
+    -fx-border-width: 0;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #007AFF;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-border-color: transparent;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #F2F2F7;
+    -fx-background-radius: 6;
+}
+
+.list-view .list-cell:selected:hover {
+    -fx-background-color: #0056CC;
+    -fx-text-fill: white;
+}
+
+/* Empty list view styling */
+.list-view:empty {
+    -fx-background-color: #FAFAFA;
+    -fx-border-style: dashed;
+    -fx-border-color: #D1D1D6;
+}
+
+/* Labels with Apple typography */
+.label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #1D1D1F;
+    -fx-font-weight: 600;
+}
+
+/* Container styling */
+.vbox, .hbox {
+    -fx-background-radius: 12;
+    -fx-background-color: #FBFBFD;
+    -fx-padding: 20;
+    -fx-spacing: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 8, 0.3, 0, 2);
+}
+
+.border-pane {
+    -fx-background-color: #ffffff;
+}
+
+/* Enhanced status label */
+#statusLabel {
+    -fx-background-color: #E3F2FD;
+    -fx-text-fill: #1976D2;
+    -fx-background-radius: 6;
+    -fx-padding: 8 12;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-effect: dropshadow(gaussian, rgba(25,118,210,0.2), 3, 0.3, 0, 1);
+}
+
+/* Title section styling */
+.title-section {
+    -fx-background-color: #FAFAFA;
+    -fx-background-radius: 12;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.04), 6, 0.2, 0, 1);
+}
+
+/* Sidebar styling */
+.sidebar {
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: #E9ECEF;
+    -fx-border-width: 0 0 0 1;
+}
+
+/* Content area label styling */
+.content-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1D1D1F;
+    -fx-padding: 0 0 8 0;
+}
+
+/* Saved notes section label */
+.notes-section-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1D1D1F;
+    -fx-padding: 0 0 12 0;
+}
