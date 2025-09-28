@@ -1,27 +1,73 @@
 package controller;
 
+import dao.CurrencyDAO;
 import javafx.scene.control.Alert;
 import model.Currency;
 import model.CurrencyConverter;
 import view.CurrencyView;
 
+import java.util.List;
+
 /**
  * This class connects our view (what we see) with our model (how things work).
+ * Now enhanced with database integration using DAO pattern
  */
 public class CurrencyController {
-    // References to our view and models
-    private CurrencyView view;
-    private CurrencyConverter converter;
+    private final CurrencyView view;
+    private final CurrencyConverter converter;
+    private CurrencyDAO currencyDAO;
 
     /**
      * Create a new controller that connects the view with the model
+     * Now loads currencies from database instead of hardcoded values
      */
     public CurrencyController(CurrencyView view) {
         this.view = view;
-        this.converter = new CurrencyConverter();
+        this.currencyDAO = new CurrencyDAO();
+
+        // Load currencies from database
+        List<Currency> currencies = loadCurrenciesFromDatabase();
+        this.converter = new CurrencyConverter(currencies);
 
         // Set up what happens when buttons are clicked
         setupEventHandlers();
+
+        // Display database statistics
+        displayDatabaseInfo();
+    }
+
+    /**
+     * Load currencies from database with fallback to hardcoded values
+     * @return List of currencies
+     */
+    private List<Currency> loadCurrenciesFromDatabase() {
+        List<Currency> currencies = currencyDAO.getAllCurrencies();
+
+        if (currencies.isEmpty()) {
+            System.out.println("Warning: No currencies loaded from database, using fallback values");
+            // If database is empty or unavailable, show error but don't crash
+            showWarning("Database connection failed.");
+        } else {
+            System.out.println("Successfully loaded " + currencies.size() + " currencies from database");
+        }
+
+        return currencies;
+    }
+
+    /**
+     * Display some database information for debugging
+     */
+    private void displayDatabaseInfo() {
+        try {
+            List<Currency> currencies = currencyDAO.getAllCurrencies();
+
+            System.out.println("=== Database Information ===");
+            System.out.println("Total currencies loaded: " + currencies.size());
+            System.out.println("=".repeat(30));
+
+        } catch (Exception e) {
+            System.err.println("Error getting database info: " + e.getMessage());
+        }
     }
 
     /**
@@ -82,6 +128,14 @@ public class CurrencyController {
     private void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private void showWarning(String message) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Warning");
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();

@@ -16,10 +16,10 @@ import java.util.List;
  */
 public class CurrencyView {
     // These are all the parts that we can see and click on our converter
-    private TextField amountField;        // Where we type how much money to convert
-    private ComboBox<Currency> fromCurrency;   // Dropdown to pick what currency we're converting from
-    private ComboBox<Currency> toCurrency;     // Dropdown to pick what currency we're converting to
-    private Button convertButton;         // Button we click to convert the money
+    private TextField amountField;
+    private ComboBox<Currency> fromCurrency;   // Dropdown to pick what currency converting from
+    private ComboBox<Currency> toCurrency;     // Dropdown to pick what currency converting to
+    private Button convertButton;         // Button convert the money
     private Label resultLabel;            // Shows the result after conversion
     private VBox mainLayout;              // The main container that holds everything
 
@@ -70,7 +70,7 @@ public class CurrencyView {
         // Select the first currency by default
         if (!currencies.isEmpty()) {
             fromCurrency.setValue(currencies.get(0));
-            // If there's at least 2 currencies, select the second one as the target
+            // optional If there's at least 2 currencies, select the second one as the target
             if (currencies.size() > 1) {
                 toCurrency.setValue(currencies.get(1));
             } else {
