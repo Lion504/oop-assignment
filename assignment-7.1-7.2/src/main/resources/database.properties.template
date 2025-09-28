@@ -1,0 +1,12 @@
+# Database Configuration Template
+# Copy this file to database.properties and fill in your actual credentials
+# This template can be safely committed to version control
+
+# Database connection settings
+db.url=jdbc:mariadb://localhost:3306/currency_converter_db
+db.username=your_database_username_here
+db.password=your_database_password_here
+
+# Connection pool settings (optional)
+db.connection.timeout=30000
+db.max.connections=10
