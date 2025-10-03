@@ -34,6 +34,7 @@ public class CurrencyDAO {
             System.err.println("Error loading currencies from database: " + e.getMessage());
             // Return empty list instead of null to prevent NullPointerException
         } finally {
+            // Close EntityManager to free resources
             if (em != null) {
                 em.close();
             }
