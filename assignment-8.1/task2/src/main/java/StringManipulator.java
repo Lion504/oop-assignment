@@ -1,12 +1,10 @@
 /**
  * StringManipulator class provides various string manipulation methods
- * This class is designed to be easy to understand for students learning Java
  */
 public class StringManipulator {
 
     /**
      * Concatenates (joins) two strings together
-     * Example: concatenate("Hello", "World") returns "HelloWorld"
      *
      * @param str1 The first string
      * @param str2 The second string
@@ -22,7 +20,6 @@ public class StringManipulator {
 
     /**
      * Finds the length (number of characters) in a string
-     * Example: findLength("Hello") returns 5
      *
      * @param str The string to measure
      * @return The number of characters in the string
@@ -38,7 +35,6 @@ public class StringManipulator {
 
     /**
      * Converts all letters in a string to UPPERCASE
-     * Example: convertToUpperCase("hello") returns "HELLO"
      *
      * @param str The string to convert
      * @return The string in uppercase
@@ -54,7 +50,6 @@ public class StringManipulator {
 
     /**
      * Converts all letters in a string to lowercase
-     * Example: convertToLowerCase("HELLO") returns "hello"
      *
      * @param str The string to convert
      * @return The string in lowercase
@@ -70,8 +65,6 @@ public class StringManipulator {
 
     /**
      * Checks if a string contains another string (substring)
-     * Example: containsSubstring("Hello World", "World") returns true
-     * Example: containsSubstring("Hello World", "Java") returns false
      *
      * @param str The main string to search in
      * @param subStr The substring to look for
