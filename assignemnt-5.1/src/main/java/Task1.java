@@ -105,7 +105,7 @@ public class Task1 {
         evenThread.start();
 
         // Wait for both threads to complete (proper thread management)
-        oddThread.join();
+        oddThread.join();//.join() waits for the thread to die
         evenThread.join();
 
         System.out.println("All threads completed successfully!");
