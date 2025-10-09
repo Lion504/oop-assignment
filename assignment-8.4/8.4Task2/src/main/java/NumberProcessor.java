@@ -6,11 +6,6 @@ import java.util.function.BinaryOperator;
 
 /**
  * Task 2: Filtering and Transforming a List of Numbers
- *
- * Demonstrates:
- * - Lambda expressions
- * - Streams
- * - Functional interfaces
  */
 public class NumberProcessor {
 
